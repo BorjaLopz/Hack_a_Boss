@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Formulario - Prueba</title>
+        <meta charset="utf-8">
+        <!-- @TODO El aspecto lo cambiaremos con el CSS -->
+        <style>
+            header
+            {
+                text-align: center;
+                background-color: rgb(129, 147, 161);
+            }
+
+            body
+            {
+                background-color: rgb(200, 176, 223);
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <section id="Select">
+            
+            <header><h1>Formulario - Prueba</h1></header>
+    
+            <main>
+                
+    
+                <select name="libros" id="listado" required>
+                    <option value="1">It</option>
+                    <option value="2">Carrie</option>
+                    <option value="3">El Resplandor</option>
+                    <option value="4">Misery</option>
+                </select>
+
+        </section>
+
+        <section id="formulario">
+
+            <form>
+                <ul>
+                    <li>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="user_name" placeholder="Introduce tu nombre"/ required="true">
+                    </li>
+                    
+                    <li>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="user_email" placeholder="Introduce tu email" required="true">
+                    </li>
+                    
+                    <li>
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="user_message" placeholder="Introduce aqui tu mensaje:" required="true"></textarea>
+                    </li>
+
+                    <button>Submit</button>
+                </ul>
+
+            </form>
+
+
+
+        </section>
+
+
+    </main>
+
+
+    </body>
+</html>

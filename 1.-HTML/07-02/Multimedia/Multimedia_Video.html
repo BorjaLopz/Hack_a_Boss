@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Multimedia_Video</title>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        
+        <header><h1>Multimedia Video</h1></header>
+
+        <main>
+            <section>
+                <h2>
+                    Video
+                </h2>
+
+                <video src="./video/Video_2.mp4" height="200" muted loop="false" controls poster="./imagen/Ciudad_Polaroid.png">
+                    ¡Tu navegador no soporta video!
+
+                    <a href="./video/Video_2.mp4" download>
+                        Puedes descargar el video pinchando aqui!.
+                    </a>
+                    <!-- 
+                        No existe accesibilidad para los videos. Por lo que las personas con dificultad para ver tendran que comenzar a escuchar el video
+                        para poder elegir si lo quieren reproducir entero o no. 
+                    -->
+                    <!-- 
+                        Esto solo lo vamos a ver en caso de que el navegador en el que este usando el usuario
+                        no pueda reproducir video (como opera mini, internet explorer antiguo, etc...) 
+                    -->
+
+                </video>
+
+                <h3>Atributos importantes para video</h3>
+
+                <dl>
+                    <dt>Heigth</dt>
+                    <dd>Esto sirve para limitar la altura del video y reserva ya un espacio para la web. Esto lo damos en pixeles (px)</dd>
+                    
+                    <dt>Width</dt>
+                    <dd>Ocurre lo mismo que con las imagenes, una vez definido el Height no hace falta definir el ancho para que no se nos deforme el video</dd>
+                    
+                    <dt>Controls</dt>
+                    <dd>Muestra botones de control para el video. Podemos crear unos controles nuevos con JS, pero estos no podremos modificarlos</dd>
+
+                    <dt>Autoplay</dt>
+                    <dd>Reproduce el video directamente en cuanto cargue</dd>
+
+                    <dt>Loop</dt>
+                    <dd>Una vez que el video acabe volvera a reproducirse desde el principio. Independientemente del autoplay</dd>
+
+                    <dt>Muted</dt>
+                    <dd>Seteamos el volumen a 0, por lo que el usuario no podra escucharlo. Podremos modificar ese valor mas tarde con JS</dd>
+
+                    <dt>Poster</dt>
+                    <dd>Una imagen que se muestra mientras el video no empieza a reproducirse. Tambien se pueden poner gifs para hacer un loading</dd>
+
+                    <!-- Consejo de Zoe -->
+                    <!-- 
+                        Podemos meter un video que ocupe todo, le quitamos controles, muted, autoplay, loop por lo que tendremos un "fondo animado"
+                        Esto lo haremos en contadas ocasiones ya que estamos metiendo un video, el cual pesa y por lo tanto no es una buena mecanica. 
+                    -->
+
+                    <!-- Si ponemos un video con autoplay es buena idea ponerlo con muted, ya que es un rollo meterte en una pagina y no saber que suena -->
+                </dl>
+
+
+            </section>
+
+
+            <section>
+                <h2>Audio</h2>
+
+                <audio controls autplay loop src="./audio/02 Stressed Out (Live).mp3" ">Este audio no suena en tu navegador</audio>
+
+                <h3>Atributos</h3>
+
+                <p>
+                    Tiene los mismos atributos que los videos, siempre sera bueno añadirle el atributo controls para poder visualizar el reproductor de audio
+                    Lo unico que no comparte es el atributo de poster
+                </p>
+
+            </section>
+
+            <section>
+                <h2>iFrame</h2>
+
+                <p>Permite crear una ventana dentro de la propia pagina para previsualizar cualquier tipo de archivo</p>
+
+                <iframe src="../imagen/Pikachu.gif" frameborder="200" ></iframe>
+
+                <iframe src="./" frameborder="1"></iframe>
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/XmtQW4GG-_g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/XmtQW4GG-_g?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+                <iframe src="https://player.twitch.tv/?channel=paracetamor&parent=www.example.com" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
+                
+            </section>
+        </main>
+
+    </body>
+
+</html>

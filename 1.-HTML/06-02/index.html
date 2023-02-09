@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Index</title>
+        <meta charset="utf-8">
+    </head>
+
+    <boyd>
+        
+        <header>
+            <h1>Index</h1>
+            <p>Esta es la pagina de inicio</p>
+            <p>
+                En este caso si quitamos la ruta relativa de los archivos (por ejemplo: http://127.0.0.1:5500/1.-HTML/06-02/Rutas.html
+                y borramos /Rutas.html) nos reconducira al fichero index.html. En caso de que no exista nos sacara todos los ficheros
+                que tenemos en la carpeta (En este caso lo vemos asi ya que estamos usando live server)
+                
+            </p>
+        </header>   
+
+        <section>
+            <h2>Rutas absolutas</h2>
+            <p>Van desde la raiz (siempre empieza con /)</p>
+
+            <p>Ruta absoluta a España: /españa</p>
+            <p>Ruta absoluta a Galicia: españa/galicia</p>
+            <p>Ruta absoluta a titulos: /titulos.html</p>
+
+
+        </section>
+
+        <section>
+            <h2>Rutas relativas</h2>
+            <p>Van desde el punto actual (donde esta escrita la ruta actual)</p>
+            <p>Pueden empezar por . o ..</p>
+            <p>. = esta carpeta</p>
+            <p>.. = carpeta superior</p>
+
+            <h3>Desde la raiz</h3>
+            <p>A España: españa o ./españa</p>
+            <p>A Galicia: españa/galicia o ./españa/galicia</p>
+            <p>R</p>
+
+            <h3>Desde España</h3>
+            <p>A la raiz: ..</p>
+            <p>A Titulos: ../Titulos.html</p>
+            <p>A Galicia: galicia o ./galicia</p>
+
+            <h3>Desde Galicia</h3>
+            <p>A la raiz: ../..</p>
+            <p>A España: ..</p>
+            <p>A Titulos: ../../titulos.html</p>
+        </section>
+
+    
+
+
+    </boyd>
+</html>

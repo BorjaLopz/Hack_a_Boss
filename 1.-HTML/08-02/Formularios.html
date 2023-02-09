@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Formularios</title>
+        <meta charset="utf-8">
+        <style>
+            h2, h1
+            {
+                text-align: center;
+                font-size: 40px;
+            }
+
+            #namingRadio, #namingSelect
+            {
+                text-align: center;
+                font-size: 24px;
+            }
+        </style>
+    </head>
+
+    <body>
+        
+        <header>
+            <h1>Formularios</h1>
+        </header>
+
+        <main>
+
+            <h2>Vamos a practicar formularios</h2>
+
+            <p>
+                No vamos a ver como gestionar formularios con JS, por lo que tendremos que quedarnos con los
+                atributos que veamos aqui en HTML
+            </p>
+
+            <form>
+                <input type="text" placeholder="Aqui vamos a escribir texto" required>
+                <!-- 
+                    Vamos a escribir la etiqueta label y tenemos que usar el atributo "for" y le damos al siguiente
+                    elemento de formulario (un input por ejemplo) el mismo nombre en su id. 
+                    De esta forma los lectores de pantalla podran leer la etiqueta descriptiva y rellenar la casilla pertinente. 
+                    Para comprobar su comportamiento, si clicamos en la palabra "Label:" vemos como se selecciona directamente
+                    la casilla para poder rellenar su contenido. 
+                -->
+                <br>
+                <label for="input">Label:</label>
+                <input type="text" id="input">
+
+            </form>
+
+            <section>
+                <h2>Otro tipo de formulario</h2>
+
+                <p>
+                    Como todos los elementos de un formulario son elementos de linea, podremos hacer un lista
+                    de campos y hacemos una lista donde cada accion con su label y con su input
+                </p>
+
+                <form>
+                    <ul>
+                        <li>
+                            <label for="text">Text:</label>
+                            <input type="text" id="text" placeholder="Metemos texto">
+                        </li>
+
+                        <li>
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" placeholder="Password">                            
+                        </li>
+
+                        <li>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" placeholder="email@example.es">
+                        </li>
+
+                        <li>
+                            <label for="numeros">Numeros:</label>
+                            <input type="number" id="numeros" placeholder="Numeros" min="0" max="99" step="5">
+                            <p>Atributos minimo para valor minimo, maximo para valor maximo y step para ver cada cuanto queremos aumentar la cantidad</p>
+                        </li>
+
+                        <li>
+                            <label for="search">Search:</label>
+                            <input type="search" id="search" placeholder="Buscar">
+                            <!-- La unica diferencia con el tipo text, una vez empecemos a escribir nos aparecera una cruz para borrar todo a la derecha -->
+                        
+                        </li>
+                        
+                        <li>
+                            <label for="url">Url:</label>
+                            <input type="url" id="url" placeholder="URL">
+                        </li>
+
+                        <li>
+                            <label for="telefono">Telefono:</label>
+                            <input type="tel" id="telefono" placeholder="Sale teclado numerico y/o agenda en movil" size="40">
+                        </li>
+
+                        <li>
+                            <label for="range">Range:</label>
+                            <input type="range" id="range" min="0" max="500" step="25">
+                            <span>valor del slider</span>
+                        </li>
+
+                        <li>
+                            <label for="date">Date:</label>
+                            <input type="date" id="date">
+                        </li>
+
+                        <li>
+                            <label for="datetime-local">Datetime-local</label>
+                            <input type="datetime-local" id="datetime-local" >
+                        </li>
+
+                        <li>
+                            <label for="week">Week:</label>
+                            <input type="week" id="week" >
+                        </li>
+
+                        <li>
+                            <label for="time">Time:</label>
+                            <input type="time" id="time">
+                        </li>
+
+                        <li>
+                            <label for="hidder">Hidden:</label>
+                            <input type="hidden" id="hidder"> 
+                            <span>Este tipo de atributo no tiene mucho sentido, ya que poner algo para que no se vea no nos sera util</span>
+                        </li>
+
+                        <li>
+                            <label for="color">Color:</label>
+                            <input type="color" id="color">
+                        </li>
+
+                        <li>
+                            <label for="checkbox">Checkbox:</label>
+                            <input type="checkbox" id="checkbox" checked>
+                            <span>
+                                En este caso no podremos modificar el color con CSS mas que su tamaño. Si quisieramos tener un checkbox
+                                personalizado, tendremos que ocultar esto y visibilizar el nuestro.
+                            </span>
+                        </li>
+
+                        <li>
+                            <label for="radio">Radio (mejor ejemplo abajo):</label>
+                            <input type="radio" id="radio">
+                        </li>
+
+                        <li>
+                            <label for="file">File:</label>
+                            <input type="file" id="file" accept="image/jpg">
+                            <span>
+                                En caso de que nos parezca feo el boton, podemos ocultar el input (lo que pone choose file) y dejar
+                                el label que funcione como ese.
+                            </span>
+                            <p>Ademas podremos delimitar que archivos queremos que acepte y cuales no con el atributo accept</p>
+                        </li>
+
+                        <li>
+                            <label for="textarea">Textarea:</label>
+                            <textarea name="textarea" id="textarea" cols="50" rows="5"></textarea>
+                        </li>
+
+                        <li>
+                            <label for="select">Select(mejor ejemplo abajo):</label>
+                            <select id="select">
+                                <option value="1">Primera prueba</option>
+                                <option value="2">Segundo prueba</option>
+                                <option value="3">Tercera prueba</option>
+                                <option value="4">Cuarta prueba</option>
+                            </select>
+                        </li>
+
+                        <li>
+                            <span>Existen 3 tipos de botones</span>
+                            <ul>
+                                <li>
+                                    <button type="submit">Submit</button>
+                                    <span>Este enviara por defecto el formulario</span>
+                                </li>
+
+                                <li>
+                                    <button type="reset">Reset</button>
+                                    <span>Este por defecto reseteara el formulario</span>
+                                </li>
+
+                                <li>
+                                    <button type="button">Button</button>
+                                    <span>Este no hace nada, por defecto se usa fuera del formulario</span>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                    <button>Enviar</button>
+                </form>
+            </section>
+
+            <h2>Atributos de campos de un formulario</h2>
+            <form>
+                <ul>
+                    <li>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name">
+                        <span>id describe el label;mientras que name describe el campo</span>
+                        <p>
+                            Es importante que todas las cosas de un formulario tengan name ya que solo asi se enviaran los datos
+                            Sino tiene el atributo name no se enviara nada
+                        </p>
+                    </li>
+
+                    <li>
+                        <label for="value">Value:</label>
+                        <input type="text" id="value" value="Valor por defecto" name="default value">
+                    </li>
+
+                    <li>
+                        <label for="placeholder">Placeholder:</label>
+                        <input type="text" id="placeholder" placeholder="Nunca pondremos nada especifico" size="26">
+                        <span title="Aqui si que podemos meter instrucciones mas concretas">a</span>
+                    </li>
+
+                    <li>
+                        <label for="autofocus">Autofocus:</label>
+                        <input type="text" id="autofocus" autofocus>
+                        <p>Esto lo que hace es que cuando abramos la pagina web directamente podamos escribir ahi</p>
+                        <p>Solo podremos poner un autofocus solamente a una casilla</p>
+                    </li>
+
+                    <li>
+                        <label for="required">Required:</label>
+                        <input type="text" id="required" required>
+                        <p>Con este atributo lo que hacemos es que un campo sea necesario para enviarlo</p>
+                    </li>
+
+                    <li>
+                        <label for="minlength-maxlength">MinLenght - maxLength:</label>
+                        <input type="text" minlength="5" maxlength="15" autocomplete="on">
+                        <p>Esto ns servira para poner un texto de una longitud minima de X y una maxima de Y</p>
+                    </li>
+
+                    <li>
+                        <label for="disabled">Disabled:</label>
+                        <input type="text" id="disabled" disabled value="hola">
+                        <p>Esto se usara en un futuro con JS para cuando no hayamos metido el usuario, no podremos meter el correo</p>
+                        <p>Otro ejemplo, es una casilla de provincia pero previamente seleccionamos el pais. Si no es España lo deshabilitamos</p>
+                        <p>Ademas, todo lo que sea disabled no se enviara en el formulario. </p>
+                    </li>
+
+                    <li>
+                        <label for="readOnly">ReadOnly:</label>
+                        <input type="text" id="readOnly" readonly value="Solamente lo vamos a leer">
+                    </li>
+
+                    <li>
+                        <label for="autocomplete">Autocomplete:</label>
+                        <input type="text" id="autocomplete" autocomplete="on" name="pruebaAutocomplete">
+                    </li>
+                </ul>
+
+                <button>Enviar!</button>
+            </form>
+
+            <section>
+                <h2>Agrupar campos</h2>
+                <fieldset>
+                    <legend>
+                        Agrupar campos
+                        <ul>
+                            <li>
+                                <label for="username">Nombre de usuario:</label>
+                                <input type="text" id="username" required>
+                            </li>
+
+                            <li>
+                                <label for="password">Contraseña:</label>
+                                <input type="password" id="password" required>
+                            </li>
+                        </ul>
+                    </legend>
+                </fieldset>
+
+                <fieldset>
+                    <legend>
+                        Direccion
+                        <ul>
+                            <li>
+                                <label for="pais">Pais:</label>
+                                <select name="pais" id="pais" name="pais">
+                                    <option value="1">España</option>
+                                    <option value="2">Francia</option>
+                                    <option value="3">Inglaterra</option>
+                                    <option value="4">Italia</option>
+                                    <option value="5">Alemania</option>
+                                </select>
+                            </li>
+
+                            <li>
+                                <label for="Municipio">Municipio:</label>
+                                <input type="text" id="Municipio" name="Municipio">
+                            </li>
+                        </ul>
+                    </legend>                    
+                </fieldset>
+
+                <fieldset>
+                    <legend>
+                        Datos de contacto
+
+                        <ul>
+                            <li>
+                                <label for="phone">Telefono de contacto</label>
+                                <input type="tel" id="phone" name="phone">
+                            </li>
+
+                            <li>
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email">
+                            </li>
+                        </ul>
+                    </legend>
+                </fieldset>
+            </section>
+
+            <section>
+                <h2>Como se usa radio y select</h2>
+
+                <h3 id="namingRadio">Radio</h3>
+
+                <form>
+                    <fieldset>
+                        <!-- Esto nos serivara para juntar campos -->
+                        <!-- Suele ir con otra etiqueta que es <legend> -->
+                            <legend>
+                                Radio
+                            </legend>
+                            <ul>
+                                <li>
+                                    <label for="man">Hombre</label>
+                                    <input type="radio" id="man" name="genero" value="Hombre">
+                                </li>
+
+                                <li>
+                                    <label for="woman">Mujer</label>
+                                    <input type="radio" id="woman" name="genero" value="Mujer">
+                                </li>
+
+                                <li>
+                                    <label for="other">Otro</label>
+                                    <input type="radio" id="other" name="genero" value="Otro">
+                                </li>
+                            </ul>
+                    </fieldset>
+                </form>
+                
+                <button>Enviar</button>
+
+            </section>
+
+            <section>
+                <h3 id="namingSelect">Select</h3>
+
+                <select name="Provincia">
+                    <option value="1">A Coruña</option>
+                    <option value="2" selected>Lugo</option>
+                    <option value="3">Ourense</option>
+                    <option value="4">Pontevedra</option>
+                </select>
+
+                <button>Enviar Select</button>
+            </section>
+
+            
+        </main>
+
+    </body>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Enlaces</title>
+    <meta charset="utf-8" />
+  </head>
+
+  <body>
+    <header >
+      <h1 id="absolutas">Enlaces</h1>
+    </header>
+
+    <section>
+      <h2>Rutas absolutas</h2>
+      <h3>Internos</h3>
+      <p>Empiezan siempre por /, van desde la raiz</p>
+
+      <p><a href="/1.-HTML/06-02/index.html">Index</a></p>
+
+      <p>
+        <a href="/1.-HTML/06-02/España/">Espanha</a>
+        <br />
+        <a href="/1.-HTML/06-02/España/Galicia/">Espanha/Galicia</a>
+      </p>
+    </section>
+
+    <section>
+      <h3>Externos</h3>
+      <p>Empiezan por http:// o https://</p>
+      <p>Van desde la raiz de otros servidores</p>
+
+      <p>
+        <a href="http://www.google.es" target="_blank">Google</a>
+      </p>
+
+      <p>
+        El atributo target con valor _blank hacer que se habra en una pestaña
+        nueva
+      </p>
+    </section>
+
+    <section>
+      <h2>Rutas Relativas</h2>
+      <p><a href="./">Inicio</a></p>
+      <p><a href="Rutas.html">Rutas</a></p>
+      <p><a href="españa">Espanha</a></p>
+      <p><a href="españa/Galicia/">Galicia</a></p>
+    </section>
+
+    <section id="anclas">
+      <h2>Anclas</h2>
+      <p>Llevan a un punto de la pagina</p>
+      <p>Empiezan por # y apuntan a un id</p>
+
+      <p><a href="#absolutas">Absolutas</a></p>
+      <p><a href="#relativas">Relativas</a></p>
+
+      <p>Se pueden añadir al final de cualquier ruta para ir a un punto especifico de esa pagina</p>
+      <p><a href="/1.-HTML/06-02/supermercado.html#frescos">Supermercado/Frescos</a></p>
+    </section>
+
+
+    <section id="enlaces_descarga">
+
+      <h2>Enlaces de descarga</h2>
+
+      <p>
+        Tienen que tener el atributo download. Este podrá tener un valor para que nos los descarguemos
+        con cierto valor, ver el ejemplo de la foto. 
+      </p>
+
+      <a download="KnorKys_Graffiti" href="/1.-HTML/06-02/514564a464da4d4asd4asd4s.png">Descargar</a>
+
+      <h2>De Email y telefono</h2>
+
+      <p>
+        <a href="mailto: borja.lpzdz5@gmail.com">Email -> borja.lpzdz5@gmail.com</a>
+      </p>
+      <p>
+        Para hacer un enlace a correo solo tenemos que añadir la etiqueta a href="mailto: " y seguido de mailto:
+        añadimos la dirección de correo que queramos
+      </p>
+      <p>
+        Como consejo es bueno tener siempre escrita la direccion de correo para que cualquier persona 
+        en cualquier dispositivo (PC o movil). 
+      </p>
+
+      <p>
+        <a href="+34651430400">Telefono -> +34 651 430 400</a>
+      </p>
+
+    </section>
+
+    <section id="enlances_accesibles">
+
+      <h2>Accesibilidad de enlaces</h2>
+
+      <p>
+        <a href="./">¡Click Aqui!</a>
+      </p>
+
+      <p>
+        El enlace anterior no esta bien, ya que no es ni intuitivo ni es accesible. 
+      </p>
+
+      <p>
+        <a href="./">Inicio</a>
+      </p>
+
+      <p>
+        Este otro enlace si que esta bien, es intuitivo y nos dice adonde vamos a ir. 
+      </p>
+
+    </section>
+  </body>
+</html>

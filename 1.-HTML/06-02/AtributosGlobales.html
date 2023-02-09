@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Atributos Globales</title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <header>
+      <h1>Atributos globales</h1>
+      <p>Esto hace referencia a que podemos ponerselo a cualquier elemento</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>ID y class</h2>
+        <p>Esto nos sirve para poder poner identificar mejor las cosas. Esto nos sera muy util para luego CSS</p>
+        <p>
+            El ID tiene que ser unico, es su "dni"
+        </p>
+        <p>
+            Mientras que class nos sirve para poner una identificacion a un grupo de elementos. 
+            Por ejemplo la clase "libros"
+        </p>
+        <p>
+            Ejemplo de un colegio:
+            El ID seria cada alumno, no su nombre y apellidos ya que pueden coincidir, seria su numero de alumno por ejemplo. 
+            <br>
+            Class ya seria la propia clase de los alumnos, o distintas etiquetas para cada alumno; "deportistas", "aplicados", "vagos"...
+        </p>
+      </section>
+
+      <section id="id-y-class">
+        <h2>ID y CLASS v2.0</h2>
+        <p id="unico">Este parrafo tiene un id llamado unico</p>
+        <p class="UniqueClass">Este parrafo tiene una clase llamada UniqueClass</p>
+        <p id="unique" class="importante">Este parrafo tiene un id llamado unico y ademas pertenece a la clase importante. </p>
+        <p class="importante destacado">Este parrafo tambien es importante, pero ademas es destacado 
+            <!-- No se puede meter 2 veces el atributo. Para eso lo que haremos es meter un espacio para separar las clases -->
+        </p>
+
+      </section>
+
+      <section>
+        <p title="Esto nos servira para enlaces">Esta seccion tiene un title. Se ve solamente cuando ponemos el cursor encima</p>
+      </section>
+
+      <section>
+        <h2>Data-</h2>
+        <p data-autor="Borja" data-fecha="06/02/2023">
+            Son atributos personalizados. El unico requisito es que empiecen por data-nombre="valor que queramos"
+            <br>
+            Esto solo nos servirá posteriormente para CSS y JS. Son datos unicamente de esta sección. 
+        </p>
+      </section>
+
+      <section>
+        <h2>Aria- {Accesibilidad}</h2>
+        <p>Lo mejor seria no necesitar usarlos, pero hay ocasiones en los que no te queda otra opcion. </p>
+        <p aria-hidden="true">Este parrafo no sera leido por lectores de pantalla. Esto sera usado por personas con problemas visuales y no vean la pagina
+            sino que la escuchan, por lo que habra cosas que no sean utiles para ellos y podamos omitir ciertos elementos. 
+        </p>
+      </section>
+    </main>
+
+    <footer></footer>
+  </body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Tablas - HTML</title>
+        <meta charset="utf-8" />
+    </head>
+
+    <body>
+        <header><h1>Tablas - HTML</h1></header>
+
+        <main>
+            <section id="tabla_basica">
+            <h2>Tabla basica</h2>
+
+            <!-- @TODO No poner el atributo border, ya que eso es CSS. Lo ponemos temporalmente -->
+            <table border="1">
+            <tr>
+                <!-- Table row -->
+                <th></th>
+                <th>
+                <!-- Table heading -->
+                Columna 1
+                </th>
+                <th>Columna 2</th>
+                <th>Columna 3</th>
+            </tr>
+
+            <tr>
+                <th>Fila 1</th>
+                <td>
+                <!-- Table data -->
+                C1_F1
+                </td>
+                <td>C2_F1</td>
+                <td>C3_F1</td>
+            </tr>
+
+            <tr>
+                <th>Fila 2</th>
+                <td>
+                <!-- Table data -->
+                C1_F2
+                </td>
+                <td>C2_F2</td>
+                <td>C3_F2</td>
+            </tr>
+            </table>
+            </section>
+
+            <section id="tabla_semantica">
+                <h2>Tabla Semantica</h2>
+
+                <table border="1">
+                    
+                    <!-- 
+                        Siempre tendremos que poner justo debajo de table la etiqueta caption 
+                        ya que esto mejorara la accesibilidad. Una persona que lo vea con lectura de pantalla
+                    -->
+                    <caption>Ejemplo de tabla semantica</caption>
+                    <thead>
+                    <!-- table head -->
+                    <!-- Aqui iran todas las filas que van a ser cabeceras -->
+                    <!-- Es recomendable usar siempre las tablas semanticas -->
+                    <th></th>
+                    <th>Columna 1</th>
+                    <th>Columna 2</th>
+                    <th>Columna 3</th>
+                    </thead>
+
+                    <tbody>
+                        <!-- table body -->
+                        <tr>
+                            <th>Fila 1</th>
+                            <td>C1_F1</td>
+                            <td>C2_F1</td>
+                            <td>C3_F1</td>
+                        </tr>
+
+                        <tr>
+                            <th>Fila 2</th>
+                            <td>C1_F2</td>
+                            <td>C2_F2</td>
+                            <td>C3_F2</td>
+                        </tr>
+
+                    </tbody>
+
+                    <tfoot>
+                        <!-- footer de la tabla -->
+                        <tr>
+                            <th>Total</th>
+                            <td>Total 1</td>
+                            <td>Total 2</td>
+                            <td>Total 3</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </section>
+
+            <section id="tabla_compleja">
+                <h2>Tabla Compleja</h2>
+
+                <table border="1">
+                    <caption>Tabla compleja</caption>
+
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Columna 1</th>
+                            <th>Columna 2</th>
+                            <th>Columna 3</th>
+                            <th>Columna 4</th>
+                        </tr>                        
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <th>Fila 1</th>
+                            <td colspan="3">Dato 1</td>
+                            <td>Dato 4</td>
+                        </tr>
+
+                        <tr>
+                            <th>Fila 2</th>
+                            <td>Dato 1</td>
+                            <td rowspan="3">Dato 2</td>
+                            <td>Dato 3</td>
+                            <td>Dato 4</td>
+                        </tr>
+
+                        <tr>
+                            <th>Fila 3</th>
+                            <td>Dato 1</td>
+                            <td rowspan="2" colspan="2">Dato 3</td>
+                        </tr>
+
+                        <tr>
+                            <th>Fila 4</th>
+                            <td>Dato 1</td>
+                        </tr>
+                    </tbody>
+
+                    <tfoot>
+                        <tr>
+                            <th></th>
+                            <td>Total 1</td>
+                            <td>Total 2</td>
+                            <td>Total 3</td>
+                            <td>Total 4</td>
+                        </tr>
+                    </tfoot>
+
+                </table>
+                
+                <p>Ver ejemplo <a href="./ProductoSupermercado.html">aqui</a></p>
+
+                <section>
+                    <h3>Ejercicio tablas complejas</h3>
+                    <p>Ver ejemplo <a href="./EjercicioRecreo.html">aqui</a> del horario de un recreo</p>
+                </section>
+
+            </section>
+
+
+        </main>
+    </body>
+</html>

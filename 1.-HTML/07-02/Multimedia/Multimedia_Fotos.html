@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Multimedia</title>
+        <meta charset="UTF-8">
+        <style>
+            body{
+                background-color: rgb(170, 245, 245);
+            }
+
+            header
+            {
+                background-color: rgb(138, 236, 253);
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-style: oblique;
+                font-size: 50px;    
+                text-align: center;
+            }
+        </style>
+    </head>
+
+    <body>
+        
+        <header>
+            <h1>Multimedia</h1>
+        </header>
+
+        <main>
+            <section id="imagenes">
+                <h2>Imagenes</h2>
+
+                <p>¿Que tipos de imagenes podremos usar?</p>
+
+                <section>
+                    <h3>Mapa de bits</h3>
+
+                    <h4>JPG</h4>
+                    <p>La etiqueta para poner imagenes es img</p>
+                    <p>
+                        Cosas importantas a tener en cuenta es el atributo src= el cual nos sirve para añadir la imagen
+                        o bien nuestra (subida al live server) o bien externa. Ejemplo 2. 
+                        Tendremos que añadir el atributo alt el cual describe la foto, o bien para personas que no la puedan ver
+                        o para cuando la imagen no pueda cargar, saldra una descripcion de la misma. 
+                        Por ultimo utilizaremos tambien el atributo heigth= el cual reserva directamente un espacio en la web
+                        para cuando la conexion no sea rapida. 
+                    </p>
+
+                    <!-- Esto nos servira para hacer un pie de pagina en las fotos que lo necesitemos -->
+
+                    <figure>
+                        <img src="./imagen/Ciudad_Polaroid.png" alt="Prueba figcaption" height="200">
+                        <figcaption>Ilustracion rascacielos polaroid vintage</figcaption>
+                    </figure>
+
+                    <img src="./imagen/Ciudad_Polaroid.png" height="200" 
+                    alt="Ciudad con rascacielos hecha en illustrator estilo vintage. "/>
+
+                    <img src="data:image/jpeg;base64,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" 
+                    alt="Fotograma de la pelicula Detective Pikachu"
+                    height="200" >
+
+                    <h4>PNG</h4>
+                    <p>Tienen muy buena calidad pero mucho peso. Es ideal pra colores planos y ademas soporta transparencias</p>
+
+                    <img src="./imagen/Victoria.png" alt="Victoria del LOL" height="200">
+
+                    <h4>Gif</h4>
+
+                    <p>Soporta animaciones. Mala calidad</p>
+
+                    <img src="./imagen/Pikachu.gif" alt="Pikachu haciendo el simbolo de la victoria con la mano en gif" height="200">
+
+                    <h4>Vectorial (SVG)</h4>
+
+                    <p>
+                        Tienen resolucion infinita. Cuando hacemos algo en illustrator o en photoshop lo suyo seria exportarlo en 
+                        modo vectorial para poder verla correctamente. 
+                        La parte negativa de estas imagenes es que, cuanto mas grande sea, mas pesada sera.
+                    </p>
+
+                    <img src="./imagen/Casa_2.svg" alt="Casa sencilla en modo icono en formato SVG" height="200">
+
+                    <h4>Como codigo</h4>
+
+                    <div>
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" style="enable-background:new 0 0 48 48;" xml:space="preserve" >
+                        <path style="fill:#ce3c1c;" d="M37,42H11c-1.657,0-3-1.343-3-3V18h32v21C40,40.657,38.657,42,37,42z"/>
+                        <path style="fill:#934E3E;" d="M7.16,15.226L24,4l16.84,11.226C41.565,15.71,42,16.523,42,17.394v0C42,18.833,40.833,20,39.394,20&#10;&#9;H8.606C7.167,20,6,18.833,6,17.394v0C6,16.523,6.435,15.71,7.16,15.226z"/>
+                        <path style="fill:#FFFDE7;" d="M28,40h-8c-1.105,0-2-0.895-2-2v-8c0-3.314,2.686-6,6-6h0c3.314,0,6,2.686,6,6v8&#10;&#9;C30,39.105,29.105,40,28,40z"/>
+                        <path style="fill:#FF3D00;" d="M24,26L24,26c-2.209,0-4,1.791-4,4v8h8v-8C28,27.791,26.209,26,24,26z"/>
+                        <circle style="fill:#8BC34A;" cx="24" cy="7" r="1"/>
+                        <circle style="fill:#FFFDE7;" cx="27" cy="9" r="1"/>
+                        <circle style="fill:#8BC34A;" cx="30" cy="11" r="1"/>
+                        <circle style="fill:#FFFDE7;" cx="33" cy="13" r="1"/>
+                        <circle style="fill:#8BC34A;" cx="36" cy="15" r="1"/>
+                        <circle style="fill:#FFFDE7;" cx="39" cy="17" r="1"/>
+                        <circle style="fill:#8BC34A;" cx="37" cy="23" r="1"/>
+                        <circle style="fill:#FFFDE7;" cx="37" cy="27" r="1"/>
+                        <circle style="fill:#8BC34A;" cx="37" cy="31" r="1"/>
+                        <circle style="fill:#FFFDE7;" cx="37" cy="35" r="1"/>
+                        <circle style="fill:#8BC34A;" cx="37" cy="39" r="1"/>
+                        <circle style="fill:#FFFDE7;" cx="33" cy="39" r="1"/>
+                        <circle style="fill:#FFFDE7;" cx="15" cy="39" r="1"/>
+                        <circle style="fill:#8BC34A;" cx="11" cy="23" r="1"/>
+                        <circle style="fill:#FFFDE7;" cx="11" cy="27" r="1"/>
+                        <circle style="fill:#FFFDE7;" cx="12" cy="19" r="1"/>
+                        <circle style="fill:#FFFDE7;" cx="36" cy="19" r="1"/>
+                        <circle style="fill:#8BC34A;" cx="11" cy="31" r="1"/>
+                        <circle style="fill:#FFFDE7;" cx="11" cy="35" r="1"/>
+                        <circle style="fill:#8BC34A;" cx="11" cy="39" r="1"/>
+                        <circle style="fill:#FFFDE7;" cx="21" cy="9" r="1"/>
+                        <circle style="fill:#8BC34A;" cx="18" cy="11" r="1"/>
+                        <circle style="fill:#FFFDE7;" cx="15" cy="13" r="1"/>
+                        <circle style="fill:#8BC34A;" cx="12" cy="15" r="1"/>
+                        <circle style="fill:#FFFDE7;" cx="9" cy="17" r="1"/>
+                        <path style="fill:#FFFDE7;" d="M25,21h-2c-1.657,0-3-1.343-3-3v-2c0-1.657,1.343-3,3-3h2c1.657,0,3,1.343,3,3v2&#10;&#9;C28,19.657,26.657,21,25,21z"/>
+                        <path style="fill:#FF3D00;" d="M25,19h-2c-0.552,0-1-0.448-1-1v-2c0-0.552,0.448-1,1-1h2c0.552,0,1,0.448,1,1v2&#10;&#9;C26,18.552,25.552,19,25,19z"/>
+</svg>
+                    </div>
+
+                </section>
+            </section>
+
+        </main>
+
+
+    </body>
+
+</html>

@@ -1,0 +1,20 @@
+HTML
+HyperText Markup Language = Lenguage de marcada de hipertexto
+
+HTTP
+
+HyperText Transfer Protocol
+
+Etiquetas:
+
+<nombre_de_la_etiqueta> Contenido </nombre_de_la_etiqueta>
+
+Etiquetas sin cierre:
+
+<nombre_de_la_etiqueta> = <nombre_de_la_etiqueta/>
+Estas dos cosas son equivalentes. Hay etiquetas que no tienen trozo de cierre.
+
+<!DOCTYPE html> 
+Etiqueta para saber que estamos escribiendo HTML. Como vamos a ver html5 necesitamos añadirle
+a la etiqueta html; en caso de que ver alguna cosa más, se trata de un documento escrito en 
+una version más antigua. 

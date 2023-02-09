@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Listas - BLD</title>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+
+        <header>
+            <h1>
+                Listas
+            </h1>
+        </header>
+
+        <main>
+            <section id="Listas_Ordenadas">
+                <h2>Listas Ordenadas</h2>
+
+                <ol>
+                    <!-- Ordered List. Por eso la etiqueta ol -->
+                    <li>
+                        ol = Ordered List. Por eso la etiqueta es ol
+                        Dentro de una lista <strong>solamente</strong> puede haber un unico elemento.
+                        Estos pueden ser solamente <strong>li</strong> que significan list item. 
+                        Dentro de un li podemos meter lo que queramos, header, article, section, etc...
+                    </li>
+
+                    <li>
+                        Otro elemento de lista
+                    </li>
+
+                    <li>
+                        <article>
+                            <h2>Titulo del articulo</h2>
+                            Aqui metemos un article dentro de un li. Dentro de los articles podemos seguir 
+                            la jerarquia de titulos (dentro de un h3 meteremos un h4, etc) o bien, 
+                            como lo podemos meter en cualquier parte, podremos partir desde el h2. 
+                            h1 nunca meteremos ya que ese solamente tiene que haber 1 en todo el html. 
+                        </article>
+                    </li>
+
+                </ol>
+            </section>
+
+            <section id="listas_desordenadas">
+                <h2>Listas Desordenadas</h2>
+
+                <ul>
+                    <!-- Unordered list. Por eso la etiqueta es ul -->
+                    <li>
+                        Al igual que en el ejemplo de antes, dentro de las listas solamente podremos meter
+                        elementos li (list item), pero dentro de cada li podremos meter lo que queramos
+                    </li>
+
+                    <li>
+                        Aqui metemos otro articulo
+                    </li>
+
+                    <li>
+                        <article>
+                            <h2>Titulo articulo</h2>
+                            <p>Lorem ipsun!</p>
+                        </article>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="menu">
+                <h2>Menu</h2>
+                <p>
+                    Es el equivalente semantico a ul pero se utiliza para listas interactivas. 
+                    Esto quiere decir que el contenido de esta lista es clicable, botones, enlaces...
+                </p>
+
+                <menu>
+                    <li><a href="#">Enlace 1</a></li>
+                    <li><a href="#">Enlace 2</a></li>
+                    <li><a href="#">Enlace 3</a></li>
+                </menu>
+
+            </section>
+
+            <section>
+
+                <h2>
+                    Diferencias listas ordenadas y listas desordenadas
+                </h2>
+    
+                <p>
+                    Las listas ordenadas tienen algo mas de informacion, ya que tienen un orden, una prioridad. 
+                    Por ejemplo si queremos hacer una lista de nuestras peliculas favoritas utilizaremos un lista
+                    ordenada. Si por el contrario queremos hacer una lista de las peliculas que hemos visto en el
+                    ultimo año, podremos utilizar una lista desordenada perfectamente. 
+                </p>
+    
+                <p>
+                    Ver el ejemplo de la receta de la <a href="./Receta.html">tortilla de patatas</a>
+                </p>
+            </section>
+
+            <section>
+                <h2>
+                    Diferencias listas desordenadas y menu
+                </h2>
+
+                <p>
+                    Mientras que una lista tiene elementos como texto para leer y nada mas, en un menu aparece
+                    una lista de articulos que son interactuables como botones y enlaces
+                </p>
+            </section>
+
+            <section id="lista_definidas">
+                <h2>De definicion</h2>
+                <p>
+                    Uso muy concreto. Se usan para descripciones, definiciones, algo parecido a un diccionario. 
+                    Su etiqueta por defecto es dl (description list) dt (description term) dd (description details)
+                </p>
+
+                <dl>
+                    <!-- Description list -->
+                    <dt>
+                        <!-- Description term -->
+                        Palabra que vamos a definir:
+                    </dt>
+                    <dd>
+                        <!-- Description details -->
+                        Descripcion
+                    </dd>
+
+                    <dt>HTML</dt>
+                    <dd>Lenguaje de marcas que se unsa para hacer paginas web</dd>
+
+                    <dt>CSS</dt>
+                    <dd>Hojas de estilo que se usan para definir el aspecto de las paginas web</dd>
+
+                </dl>
+
+            </section>
+
+
+            <section id="Listas_Anidadas">
+                <h2>Listas Anidadas</h2>
+
+                <p>Las listas las podemos ordenadar como queramos, ul dentro de ol y viceversa</p>
+
+                <ol>
+                    <li>Elemento 1</li>
+                    <li>Elemento 2:
+                        <ul>
+                            <li>Subelemento 1</li>
+                            <li>Subelemento 2</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <p>Para verlo mejor, buscar en <a href="./ListasAnidadas.html"><strong>listas anidadas</strong></a> </p>
+
+            </section>
+        </main>
+
+    </body>
+</html>
