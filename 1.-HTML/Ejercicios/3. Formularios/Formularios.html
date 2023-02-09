@@ -5,10 +5,115 @@
         <meta charset="UTF-8">        
     </head>
 
-    <body>
-        
+    <body>        
         <header>
             <h1>3. Formularios</h1>
         </header>
+
+        <main>
+            <h2>Creamos un formulario</h2>
+
+            <form>
+                <ul>
+                    <!--
+                        Nombre, con un control de tipo texto que sea obligatorio cubrirlo y con autofoco.
+                    -->
+                    <li>
+                        <label for="nombre">Nombre </label>
+                        <input type="text" id="nombre" name="name" required autofocus>
+                    </li>
+
+                    <!-- Correo electrónico, con un control de tipo email que sea obligatorio. -->
+                    <li>
+                        <label for="email">Email </label>
+                        <input type="email" id="email" name="email" required>
+                    </li>
+
+                    <!-- 
+                        URL, con un control de tipo url que cuando esté vacío muestre dentro la ayuda 
+                        "Escribe la URL de tu página web personal" usando la propiedad placeholder. 
+                    -->
+
+                    <li>
+                        <label for="url">URL </label>
+                        <input type="url" id="url" placeholder="Escribe la URL de tu página web personal">
+                    </li> 
+                    
+                    <!-- Fecha, con un control de tipo date. -->
+
+                    <li>
+                        <label for="fecha">Fecha </label>
+                        <input type="date" id="fecha">
+                    </li>
+
+                    <!-- Tiempo, con un control de tipo time. -->
+
+                    <li>
+                        <label for="tiempo">Tiempo</label>
+                        <input type="time" id="tiempo">
+                    </li>
+
+                    <!-- Fecha y hora, con un control de tipo datetime-local. -->
+
+                    <li>
+                        <label for="fecha_hora">Fecha y hora </label>
+                        <input type="datetime" id="fecha_hora">
+                    </li>
+
+                    <!-- Mes, con un control de tipo month. -->
+
+                    <li>
+                        <label for="mes">Mes </label>
+                        <input type="month" id="mes">
+                    </li>
+
+                    <!-- Semana, con un control de tipo week. -->
+
+                    <li>
+                        <label for="semana">Semana </label>
+                        <input type="week" id="semana">
+                    </li>
+
+                    <!-- 
+                        Número, con un control de tipo number que limite la entrada a un valor entre -10 y 10. 
+                    -->
+
+                    <li>
+                        <label for="numero">Numero</label>
+                        <input type="number" id="numero" min="-10" max="10">
+                    </li>
+
+                    <!-- 
+                        Teléfono, con un control de tipo tel que tenga un valor inicial y que no se pueda editar. 
+                    -->
+
+                    <li>
+                        <label for="telefono">Telefono </label>
+                        <span>+34</span>
+                        <input type="text" id="telefono">
+                    </li>
+
+                    <!-- Término de búsqueda, con un control de tipo search y que este deshabiltado. -->
+
+                    <li>
+                        <label for="termino_de_busqueda">Busqueda </label>
+                        <input type="search" id="termino_de_busqueda" disabled>
+                    </li>
+
+                    <!-- Color favorito, con un control de tipo color. -->
+
+                    <li>
+                        <label for="color">Color favorito </label>
+                        <input type="color" id="color">
+                    </li>
+
+                </ul>
+
+
+                <button>Enviar!</button>
+            </form>
+
+
+        </main>
     </body>
 </html>
