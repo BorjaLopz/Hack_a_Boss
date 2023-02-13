@@ -1,0 +1,9 @@
+a:hover
+{
+color: cyan;
+}
+
+a:active
+{
+    color:rgb(255, 196, 0)
+}

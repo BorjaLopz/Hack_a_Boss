@@ -1,0 +1,135 @@
+/* Esto nos sirve para quitar todos los estilos por defecto de la pagina */
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div
+{
+    border: 1px solid black;
+}
+
+p
+{
+    font-size: 16px;
+    border: 1px solid blue;
+}
+
+/* PX */
+/* Los pixeles se toman como medida absoluta */
+#px 
+{
+    width: 200px;
+    height: 200px;
+    padding: 50px;
+}
+
+
+/* 
+    Los pixeles los utilizaremos para mostrar el valor minimo de algo, por ejemplo un borde, lo mas pequeño sera un pixel, menos imposible 
+    En los pixeles no se pueden poner numeros decimales, solamente numeros enteros. 
+*/
+
+
+/* EM */
+#em
+{
+    width: 10em;
+    height: 10em;
+    padding: 1em;
+
+    font-size: 25px;
+}
+/* EM nos sera muy util para mantener las proporciones de los texto */
+
+
+/* REM */
+#rem
+{
+    width: 10rem;
+    height: 10rem;
+    padding: 1rem;
+
+    font-size: 25px;
+}
+/*  Sin embargo, REM, no crece todo lo demas en proporcion. Solamente crece el tamaño de la fuente*/
+
+/* PORCENTAJE */
+#porcentaje
+{
+    width: 50%;
+    /* En altura no suele funcionar */
+    padding: 5%;
+    height: 200px;
+}
+
+#porcentaje p
+{
+    height: 50%;
+    /* En altura funciona si el padre tiene una altura definida, como en este caso */
+    width: 50%;
+}
+
+/* VIEWPORT WIDTH */
+#vw
+{
+    /* Hace lo mismo que el del porcentaje, pero esto siempre va a tener de referencia el viewport, la pantalla */
+    width: 50vw;
+    /* Esto se suele utilizar para hacer cuadrados perfectos, incluso si se modifica el ancho de la ventana,este se reescalar */
+    height: 50vw;
+    padding: 5vw;
+}
+
+#vw p
+{
+    width: 50vw;
+}
+
+
+/* VIEWPORT HEIGHT */
+#vh
+{
+    width: 20vh;
+    height: 20vh;   
+    padding: 3vh;
+}
+
+/* VIEWPORT MIN */
+#vmin
+{
+    width: 50vmin;
+    height: 50vmin;   
+    padding: 3vmin;
+}
+/* 
+Esto esta pensado para moviles, ya que en caso de que tengamos todo perfectamente escalado y giremos el movil, 
+el ancho ocupará el alto y el alto ocupará el ancho, por lo que podremos descuadrarlos, por lo que esto lo que hara es quedarse
+con el ancho real del movil, aunque se gire 
+*/
+
+/* VIEWPORT MAX */
+#vmax
+{
+
+}
+/* Este hara justamente lo contrario, cogerá el que ocupe mas, en este caso el largo en vez del ancho */
+
+
+/* ZOE suele utilzar REM, ya que este variará en funcion del tamaño de la fuente de HTML */
+
+/* Ventajas de REM, podemos ajustar todo mejor y depende de la fuente de HTML */
+/* Ventajas de VMin o VMax, vamos a poder ajustar cada elemento en funcion del tamaño de la pantalla */
+/* Ventajas de pixeles, ponemos valor absoluto a algo. La mejor utilidad que le podemos dar es para bordes o tamaños exactos de fuente */
+html
+{
+    font-size: 12px;
+}
+
+/* Ejemplo para ver menos ahogado el texto en una caja de input de texto */
+input
+{
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
