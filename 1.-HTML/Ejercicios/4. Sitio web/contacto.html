@@ -8,8 +8,61 @@
 
     <body>
         <header>
-            <h1>Contacto Borja Lopez Diaz</h1>
+            <section id="enlaces"> 
+                <ul>
+                    <li><a href="./">Sobre mi</a></li>
+                    <li><a href="./proyectos.html">Proyectos</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                </ul>
+
+                <h1>¿Cómo contactar conmigo? - Borja</h1>
+            </section>
         </header>
+
+        <main>
+            <!-- No añadimos secciones ya que solamente tenemos esta -->
+            <fieldset id="datos_de_contacto">
+                <legend>Mis datos de contacto</legend>
+                <p>Enviame un email a <a href="mailto:borja.lpzdz5@gmail.com">borja.lpzdz5@gmail.com</a></p>
+                <p>Llámame al <a href="tel:+34651430400">+ 34 651 430 400</a></p>
+                
+                <!-- Practicamos formularios -->            
+                <fieldset id="formulario_de_contacto">
+                    <form id="Contacto_Ejercicio4" method="get">
+                        <ul>
+                            <li>
+                                <label for="Nombre">Nombre</label>
+                                <input type="text" id="Nombre" name="Nombre" required>
+                            </li>
+
+                            <li>
+                                <label for="phone">Telefono de contacto</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </li>
+
+                            <li>
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </li>
+
+                            <li>
+                                <label for="Message">Mensaje:</label>
+                                <textarea id="Message" name="user_message" placeholder="Introduce aqui tu mensaje:" required aria-setsize="500"></textarea>
+                            </li>
+
+
+                            <button>Enviar!</button>
+                    </form>
+                </fieldset>
+                    
+            </fieldset>
+
+        </main>
+
+        <footer>
+            <p>©Borja López Díaz - 2023</p>
+        </footer>
+
     </body>
 
 </html>
