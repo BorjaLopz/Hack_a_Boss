@@ -7,3 +7,17 @@ h1
 {
     color: cornsilk;
 }
+
+section
+{
+    background-color: bisque;
+}
+
+p
+{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Los comentarios son utiles para ordenar las secciones */
+/* Por ejemplo, ahora vamos a hacer el header pues pondremos /* Header * /  y listo*/
+
