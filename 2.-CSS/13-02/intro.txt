@@ -1,1 +1,16 @@
 CSS = Cascade Style Sheets = Hojas de estilo en cascadas
+
+CSS funciona con reglas
+
+Todas las reglas se estructuran con dos partes, la primera seria el selector y la segunda es el bloque de declaraciones
+Dentro del bloque de declaraciones tambien se divide en dos partes, propiedad y valor
+
+selector 
+{
+    bloque de declaraciones
+    propiedad: valor;
+}
+
+propiedad = es lo que queramos modificar, el texto, el fondo, el tamaño...
+El valor es directamente el valor que queramos que tenga dicha propiedad, distintos colores, tamaño...
+Importante aqui ya tenemos que terminar todo con ";", sino no lo leera bien. 
