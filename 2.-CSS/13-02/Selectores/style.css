@@ -1,0 +1,85 @@
+/* Selectores Básicos */
+
+h1
+{
+    color: blue;
+}
+
+p
+{
+    color: blueviolet;
+}
+
+/* CLASE */
+
+.Importante
+{
+    font-size:larger
+}
+
+.Aclaraciones
+{
+    color:black
+}
+
+#unico
+{
+    font-size: 1.2rem;
+}
+
+[lang="en"]
+{
+    font-style: oblique;
+}
+
+[href]
+{
+    font-size: 1.5rem;
+}
+
+/* Todos los enlaces externos van a tener esta tipografia */
+[href^="http"]
+{
+    font-family: sans-serif;
+}
+
+/* Todos los elementos que terminen con .com */
+[href$=".com"]
+{
+    color: green;
+}
+
+/* Todos los enlaces que contengan la palabra wiki*/
+[href*="wiki"]
+{
+    text-decoration: line-through;
+}
+
+:first-child
+{
+    border: 1px solid black;
+}
+
+:first-of-type
+{
+    box-shadow: 0 0 20px blue;
+}
+
+/* Selector :not se suele combinar con otros selectores ya que cogerá todo menos ese */
+/* Por ejemplo, todos los p menos los que tengan la clase importante */
+
+p:not(.Importante)
+{
+    text-decoration: underline;
+}
+
+h1::first-letter
+{
+    font-size: 4rem;
+    color: red;
+}
+
+p::first-line
+{
+    background-color: grey;
+}
