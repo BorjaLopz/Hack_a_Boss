@@ -83,3 +83,19 @@ p::first-line
 {
     background-color: grey;
 }
+
+::selection
+{
+    background-color: black;
+    color:cyan
+}
+
+a::before
+{
+    content: "➡";
+}
+
+a::after
+{
+    content: "⬅";
+}

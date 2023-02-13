@@ -1,0 +1,63 @@
+/* Mismo elemento pero mas específico */
+
+p.Importante
+{
+    text-decoration: underline;
+}
+
+p:first-of-type
+{
+    color: blueviolet;
+}
+
+/* Aqui solamente estamos llamando a la primera seccion que aparece */
+section:first-of-type
+{
+    font-family: 'Times New Roman', Times, serif;
+    border: 1px solid black;
+}
+
+/* Descendiente */
+
+section h2
+{
+    background-color: rgb(165, 168, 170);
+}
+
+/* Sin embargo aqui estamos llamando a la seccion, que mire dentro de ello cual es la primera cosa de cada etiqueta */
+section :first-of-type
+{
+    border: 1px solid blue;
+}
+
+/* 
+El que tenemos en la linea de abajo es perfectamente valido, aunque ahora mismo no este haciendo nada
+Puede ser que lo hayamos utilizado o lo estemos implementando para en un futuro usarlo 
+*
+/
+header section :first-of-type
+{
+    border: 1px solid rgb(21, 21, 133);
+}
+
+/* Hijo directo */
+
+
+/* 
+Esto quiere decir que, dentro de body, solamente vamos a seleccionar el header que esta dentro del body y no el 
+header que este dentro de una section y a su vez este dentro del header 
+*/
+
+body > header
+{
+    background-color: rgb(155, 155, 219);
+}
+
+/* Varios elementos */
+
+p, 
+li
+{
+    font-family: Arial, Helvetica, sans-serif;
+    color:darkkhaki
+}
