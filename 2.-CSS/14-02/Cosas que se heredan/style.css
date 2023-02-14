@@ -1,0 +1,47 @@
+html
+{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header
+{
+    padding: 2rem;
+
+    color: blue;
+    font-family: sans-serif;
+    font-style: italic;
+
+
+    border: 1px solid black;
+}
+
+main
+{
+    color: blueviolet;
+
+    border: 5px double blue;
+
+    padding: 5rem;
+}
+
+#al_reves
+{
+    /* Si algo que se hereda, no queremos que se herede, tendremos que utilizar la keyword "initial" */
+    color: initial;
+
+    border: inherit;
+
+    padding: inherit;
+}
+
+#noticias{
+    color: red;
+}
+
+p.textoNoticia{
+    color: green;
+}
+
+section .textoNoticia{
+    color: blue;
+}

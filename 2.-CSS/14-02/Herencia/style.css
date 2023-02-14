@@ -1,0 +1,50 @@
+html
+{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header
+{
+    /* No se lo decimos al h1, sino que lo hereda de aqui del header */
+    color: blue;
+}
+
+main#main
+{
+    /* 
+        Aunque en este caso tengamos especificidad 1, 0, 1, la herencia se propaga, pero no se impone
+    */
+    color: blueviolet;
+}
+
+p.no_hereda
+{
+    /*  
+        Por eso en este caso como este parrafo class="no_hereda" se pone por encima del color de la herencia del main
+    */
+    color: blue;
+}
+
+span
+{
+    /* Si no comentamos esta linea, veremos como los dos span que hay en cada parrafo aparecerá de color black */
+    /* Sin embargo, si lo comentamos el span no tendrá ningun color sino que lo hereda del color de cada parrafo */
+    color: black;
+}
+
+a
+{
+    /* Sino especificamos el color del enlace, este obtendra el color nativo del navegador */
+    color: aqua;
+}
+
+ul
+{
+    color: green;
+}
+
+/* * es el selector universal, es decir, todos los elementos dentro de una section */
+section * 
+{
+    color: green;
+}
