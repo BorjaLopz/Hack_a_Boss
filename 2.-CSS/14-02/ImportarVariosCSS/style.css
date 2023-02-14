@@ -1,0 +1,16 @@
+@import url(header.css);
+@import url(reset.css);
+html
+{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body
+{
+    background-color: rgb(194, 194, 194);
+}
+
+main
+{
+    color: blue;
+}

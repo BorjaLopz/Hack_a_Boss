@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@1,700&display=swap');
+
 html
 {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    font-family: "Lobster two", cursive;
 }
 
 li:nth-child(1)
@@ -16,4 +18,105 @@ li:nth-child(2)
 li:nth-child(3)
 {
     font-family: serif;
+}
+
+li:nth-child(4)
+{
+    font-family: "Lobster two";
+    font-style: normal;
+    /* 
+        Esto funcionará de la siguiente manera:
+        En caso de que en el ordenador tengas la fuente "Courier New" la pondra
+        En caso de que no la tenga, va a buscar una fuente Courier
+        En caso de que no encuentre ninguna, escogera una fuente monospace
+    */
+}
+
+li:nth-child(5)
+{
+    /* Tipografia */
+    font-family: monospace;
+
+    /* Tamaño */
+    font-size: 1.5rem;
+    
+    /* Estilo */
+    font-style: italic;
+
+    /* Peso (grosor) */
+    font-weight: lighter;
+
+}
+
+li:nth-child(6)
+{
+    /* Color */
+    color: blue;
+
+    /* Transformacion */
+
+        /* Mayusculas */
+    text-transform: uppercase;
+        /* Minusculas */
+    text-transform: lowercase;
+        /* Mayuscula cada primera letra de cada palabaa */
+    text-transform: capitalize;
+
+    /* Decoracion (subrayado, tachado, sombreado por arriba) */
+        
+        /* Tachado */
+    text-decoration: line-through;
+        /* Subrayado */
+    text-decoration: underline;
+        /* Si queremos dos propiedades, las tenemos que etiquetar dentro de la misma etiqueta */
+    text-decoration: overline underline;
+        /* Tambien podremos modificar el estilo de las lineas, el color, etc... Tambien tendremos que escribirlo en la misma linea */
+    text-decoration: underline overline coral;
+}
+
+li:nth-child(7)
+{
+    text-decoration: underline red;
+    text-decoration-style: wavy ;
+}
+
+li:nth-child(8)
+{
+    /* Sombra */
+    /* 
+        Desplazamiento horizontal,
+        Desplazamiento vertical,
+        Difusion, 
+        Color
+    */
+
+    font-size: 1rem;
+    text-shadow: 0 0 6px cyan, 0 0 20px magenta;
+}
+
+li:nth-child(9)
+{
+    font-size: 1rem;
+    /* De esta manera simulamos un borde para la fuente */
+    /* text-shadow: 1px 0 0 red, -1px 0 0 red, 0 1px 0 red, 0 -1px 0 red; */
+    -webkit-text-stroke: 1px red;
+}
+
+p
+{
+    /*  Estilos de disposicion*/
+    text-align: center;
+    text-align: right;
+    /* Separar las lineas entre si aqui no hace falta añadir unidades*/
+    line-height: 1.8;
+
+    /* Separar palabras aqui tendremos que poner las unidades */
+    word-spacing: 20px;
+}
+
+h1
+{   
+    width: 50%;
+    text-align: center;
+    background-color: rgb(247, 169, 141);
 }
