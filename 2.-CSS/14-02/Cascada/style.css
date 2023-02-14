@@ -1,4 +1,65 @@
 html
 {
-    font-family: 'Courier New', Courier, monospace;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.destacado
+{
+    color:blueviolet;
+    /*
+        Si queremos que algo se aplique si o si, podemos utilizar !important para tirar de ello
+        Tenemos que tener cuidado ya que no tenemos que abusar de ello, si en nuestro css hay muchos !important
+        es que algo estamos haciendo mal. 
+        Tenemos que procurar adaptar el documento de otras maneras
+     */
+    text-decoration: line-through; /* !important*/
+}
+
+/* 
+    Como todo en HTML y CSS, cuanto mas abajo esté mas importante será ya que el navegador irá leyendo linea a linea
+    Por lo que al terminar la linea dos (color azul por ejemplo) pondra el texto en azul
+    Pero si la linea tres (color rojo) modificara de nuevo el color y lo pondra a rojo
+*/
+
+/* Tag/Etiqueta/Elemento, pseudo-elementos = 0, 0, 1 */
+/* 11 elementos no es lo mismo que = 0, 1, 1 sino que es igual a = 0, 0, 11 */
+/* Gana siempre el que tenga el numero mas grande a la izquierda */
+li
+{
+    color: blue;
+}
+
+/* Clase, pseudo-clase, atributo = 0, 1, 0 */
+
+.destacado
+{
+    color:blueviolet
+}
+
+/* ID = 1, 0, 0 */
+
+#unico
+{
+    color: chartreuse;
+}
+
+/* Selectores combinados */
+/* Esto tiene un peso de 0, 2, 0 */
+/* .importante.destacado
+{
+    text-decoration: underline;
+} */
+
+/* Esto sera mas generico */
+/* Pero como esto pesa mas (1, 0, 1) prevalecerá */
+/* #Lista li
+{
+    text-decoration: underline;
+} */
+
+/* Mejor forma de hacerlo */
+/* Esto tiene un valor de 1, 2, 0 */
+#lista .importante.destacado
+{
+    text-decoration: underline;
 }

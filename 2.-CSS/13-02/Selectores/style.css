@@ -37,19 +37,22 @@ p
     font-size: 1.5rem;
 }
 
-/* Todos los enlaces externos van a tener esta tipografia */
+/* Todos los enlaces externos van a tener esta tipografia */ç
+/* Todo lo que empiece por lo entrecomillado */
 [href^="http"]
 {
     font-family: sans-serif;
 }
 
 /* Todos los elementos que terminen con .com */
+/* Todo lo que termine por lo entrecomillado */
 [href$=".com"]
 {
     color: green;
 }
 
 /* Todos los enlaces que contengan la palabra wiki*/
+/* Todo lo que tenga  */
 [href*="wiki"]
 {
     text-decoration: line-through;
