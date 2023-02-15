@@ -1,0 +1,44 @@
+/* @import url("D:/PythonPruebas/Hack_a_Boss_Trabajo_Casa/2.-CSS/14-02/ImportarVariosCSS/header.css"); */
+html
+{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Reset */
+/* 
+    Esto servira para ajustar todo desde el principio de una misma manera y que no se 
+    apliquen los ajustes que el navegador escoja 
+*/
+/* Selector universal */
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main
+{
+    width: 50vw;
+
+    /* Deja mas hueco una vez termina el texto */
+    height: 20rem;
+    /* Esto separará el texto del borde */
+    padding: 2rem;
+
+    margin: 2rem;
+    border: 1px solid black;
+}
+
+p:first-child
+{
+    /* Separamos los parrafos */
+    margin: 2rem;
+
+    /* 
+        En caso de que haya distintos margenes en los parrafos no se solapan, se acopla el que tenga mayor margen
+        Y el otro se queda a esa distancia. 
+        Si yo necesito tener a la gente a 3 metros y me junto con alguien que necesita que yo este a 1 metro
+        No estamos a 4 metros, permanecemos a 3 ya que asi se respetan ambos espacios
+    */
+}
