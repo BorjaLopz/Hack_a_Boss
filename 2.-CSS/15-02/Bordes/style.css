@@ -1,0 +1,80 @@
+html
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+div
+{
+    border: 1px solid black;
+    height: 10rem;
+    width: 8rem;
+    margin: 2rem;
+}
+
+div:nth-of-type(1)
+{
+    /* El border se divide en varias propiedades: border-width: el cual por defecto sera de 1px;
+    border-style: el cual por defecto sera none; y por ultimo aparece la propidad border-color: el cual por defecto sera currentColor que sera el color del texto que.
+    
+    */
+
+    border-width: 10px;
+    border-style: double;
+    border-color: currentColor;
+
+    color: red;
+}
+
+div:nth-of-type(2)
+{
+    /* border: 5px dotted blue; */
+    /* Esto es lo mismo que */
+    border-width: 5px;
+    border-style: dotted;
+    border-color: blue;
+}
+div:nth-of-type(3)
+{
+    /* Hace un efecto "3D" simulando el color.*/
+    /* Esto se suele usar en botones aunque parezca windows98 */
+    border: 3px inset gray;
+}
+
+div:nth-of-type(4)
+{
+    border: 5px outset gray;
+}
+
+div:nth-of-type(5)
+{
+    border-top: 3px double red;
+    border-right:  2px dashed blue;
+    border-left: 7px solid green;
+    border-bottom: 2px groove purple;
+}
+
+div:nth-of-type(6)
+{
+    border: 2px groove purple;
+}
+
+div:nth-of-type(7)
+{
+    border: 2px dotted blueviolet;
+    border-top-width: 5px;
+}
+
+div:nth-of-type(8)
+{
+    /* Si metemos 4 propiedades estas iran arriba, derecha, abajo, izquierda */
+    border-style: dotted solid double dashed;
+
+    /* Si metemos 3 palabras estas iran arriba, derecha-izquierda, abajo */
+    border-width: 1px 3px 5px;
+
+    /* Si metemos 2 palabras estas iran arriba-abajo, derecha-izquierda */
+    border-color: cyan magenta;
+
+    /* Si metemos 1 palabra esta sera para todos los lados igual */
+    /* border-color: cyan; */
+}

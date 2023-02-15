@@ -1,0 +1,80 @@
+*
+{
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+div
+{
+    border: 1px solid black;
+    width: fit-content;
+    /* height: 5rem;
+    margin: 2rem; */
+}
+
+div:nth-of-type(2)
+{
+    padding: 1rem;
+    margin: 1rem;
+}
+
+div:nth-of-type(3)
+{
+    /* No solemos utilizar las 4 por separado, pero si que podemos poner una general [margin] y segun veamos como nos queda podemos maquetar la hoja añdiendo un margin-top o un margin-bottom por ejemplo */
+    margin-top: 1rem;
+    margin-left: 2rem;
+    margin-bottom: 3rem;
+    margin-right: 4rem;
+}
+
+div:nth-of-type(4)
+{
+    /* Hacemos lo mismo que con el margin */
+    padding-top: 1rem;
+    padding-left: 2rem;
+    padding-bottom: 3rem;
+    padding-right: 4rem;
+}
+
+div:nth-of-type(5)
+{
+    /* En caso de querer ponerlo todo solamente en una linea, mantendra el mismo orden */
+    /* Arriba / Derecha / Abajo / Izquierda */
+    padding: 1rem 2rem 3rem 4rem;
+    margin: 1rem 2rem 3rem 4rem;
+}
+
+div:nth-of-type(6)
+{
+    /* Para centrar elementos en horizontal lo mas facil es poner lo siguiente */
+    padding: auto; /* = 0 */ 
+    margin: auto; /* = 0 en vertical, centrado en horizontal */
+}
+
+div:nth-of-type(7)
+{
+    /* Truco para alinear a la derecha */
+    margin-left: auto;
+
+    /* Esto es lo que tiene por defecto */
+    margin-right: 0;
+}
+
+div:nth-of-type(8)
+{
+    /* Lo mismo para alinear a la izquierda */
+    margin-left: 0;
+    margin-right: auto;
+}
+
+body
+{
+    /* No siempre nos hara falta, pero tenemos que acostumbrarnos a esto */
+    min-height: 100vh;
+}

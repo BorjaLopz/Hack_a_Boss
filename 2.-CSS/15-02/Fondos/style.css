@@ -11,9 +11,120 @@ html
 
 div
 {
-    width: 10rem;
+    width: 8rem;
     height: 10rem;
     margin: 2rem;
     border: 1px solid black;
     padding: 2rem;
+    color: white;
+}
+
+div:nth-of-type(1)
+{
+    background-color: aqua;
+}
+
+div:nth-of-type(2)
+{
+    background-image: url("https://source.unsplash.com/random");
+    
+
+}
+
+div:nth-of-type(3)
+{
+    background-image: url("https://1.bp.blogspot.com/-idg0QTlPQgk/Uqrs1-xs9BI/AAAAAAAAFs4/deDtuNQY2YE/s1600/tiled-background-red-gemstone-tiles.jpg");
+    background-size: 50px;
+}
+
+div:nth-of-type(4)
+{
+    background-image: url("https://source.unsplash.com/random");
+    /* Ajustamos el tamaño de la foto si es mucho mas grande de lo que queremos */
+    background-size: 100px;
+    /* Hacemos que no se repita la foto en caso de que sea mas pequeña de lo que queremos */
+    background-repeat: no-repeat;
+    /* Hacemos que solamente se repita en el eje X */
+    background-repeat: repeat-x;
+    /* Hacemos que solamente se repita en el eje Y */
+    background-repeat: repeat-y;
+    /* En este caso las medidas a poner son margen de la izquierda, margen de la derecha */
+    /* Tambien podemos escribirlo con palabras clave {top - right - left - bottom} para cada coordenada */
+    /* En caso de que se repita, ajustará bien la que nosotros coloquemos en background-position y el resto las repetirá */
+    background-position: top right;
+}
+
+div:nth-of-type(5)
+{
+    background-image: url("https://images.unsplash.com/photo-1676473094686-c1699a890dde?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMnx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=60");
+
+    background-position: right bottom;
+
+    /* En este caso como la imagen es muy grande, se ajusta abajo a la derecha y el resto se corta */
+
+}
+
+div:nth-of-type(6)
+{
+    background-image: url("https://images.unsplash.com/photo-1676473094686-c1699a890dde?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMnx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=60");
+
+    background-size: cover;
+
+    /* 
+        Cover lo que hace es estirar la imagen para que ocupe todo el fondo, pero nunca la deformará. 
+        En caso de que sobre imagen, cortará lo que sobre. 
+        En caso de que sea pequeña, lo que hara sera estirarla y es probable que se pixele algo la imagen al faltarle calidad
+    */
+}
+
+div:nth-of-type(7)
+{
+    background-image: url("https://images.unsplash.com/photo-1676473094686-c1699a890dde?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMnx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=60");
+
+    background-position: right bottom;
+
+    /* En este caso como la imagen es muy grande, se ajusta abajo a la derecha y el resto se corta */
+}
+
+div:nth-of-type(8)
+{
+    background-image: url("https://images.unsplash.com/photo-1676299087754-e2d49662719f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxNXx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=60");
+
+    /* Para hacer que una imagen adapte su tamaño al contenedor, utilizaremos la palabra contain. Ademas podremos usar "no-repeat" para evitar que se repita  quede más feo. Tambien podemos usar la palabra "center" para hacer que se quede centrada en su contenedor*/
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+img
+{
+    height: 20rem;
+    width: 20rem;
+
+    object-fit: contain;
+    object-position: bottom;
+}
+
+p
+{
+    border: 1px solid black;
+    width: 10rem;
+    height: 10rem;
+    margin: 2rem;
+
+    /* Es buena practica utilizar tanto como background color como background image, para que en caso de que haya huecos no se vera ningun hueco vacio, tambien en caso de que la imagen falle se seguirá viendo el color*/
+    background-color: bisque;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("https://images.unsplash.com/photo-1676439284449-859c918b274a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzNXx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=60");
+}
+
+p:nth-of-type(1)
+{
+    /* De esta manera nos estamos cargando todo lo que hemos trabajado en el fondo en el selector anterior porque estamos utilizando unicamente "background" y por tanto se sobreescribe; En este caso deberiamos utilizar directamente "background-image" para modificar unicamente la imagen*/
+    /* Cuando no le ponemos nada a la propiedad general  ["background"] lo que interpreta el navegador es la propiedad por defecto, aunque no estemos escribiendo nada del tamaño, del color y si se repite, el navegador se los pondra por defecto */
+    background: url("https://images.unsplash.com/photo-1676426019486-da5eb4164162?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0MXx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=60");
+    background-repeat: repeat;
+    background-size: contain;
 }
