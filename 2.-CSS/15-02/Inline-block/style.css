@@ -1,0 +1,67 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+h1, h2
+{
+    text-align: center;
+}
+
+section
+{
+    border: 10px solid blue;
+}
+/* Elementos de bloque, podremos manejar su ancho y su alto */
+p
+{
+    border: 1px solid black;
+    width: 50vw;
+    height: 15rem;
+    margin: 2rem;
+    padding: 2rem;
+    overflow: auto;
+    background-color: aqua;
+}
+
+/* Elementos de linea los cuales no hacen caso ni en ancho ni el alto */
+span, strong
+{
+    border: 1px solid rgb(255, 0, 106);
+    width: 5rem;
+    height: 5rem;
+
+    /* Margin solo nos hace caso en horizontal, no en vertical */
+    margin: 1rem;
+
+    /* Padding tambien nos hace caso pero descuadra todo lo que esta al alrededor de la estos bloques*/
+    padding: 1rem;
+
+    /* Esto nos bloquea el contenido de detras(como si fuera capas, esto esta por encima) mientras que lo que esta por encima se seguira viendo */
+    background-color: aquamarine;
+}
+
+/* Podemos cambiar los elementos de linea para que se comporten como si fuera de bloque */
+#block *
+{
+    display: block;
+}
+
+/* Tambien podremos cambiar de elementos de bloque a elementos de linea */
+#inline *
+{
+    display: inline;
+}
+
+/*  Aqui cogemos todo lo bueno de los dos displays:*/
+/* Podremos modificar totalmente las dimensiones y su espaciado y tambien podemos meter cosas a los lados */
+#inline-block *
+{
+    display: inline-block;
+}
