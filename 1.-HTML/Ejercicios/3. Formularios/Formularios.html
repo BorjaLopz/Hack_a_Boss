@@ -14,7 +14,8 @@
             <h2>Creamos un formulario</h2>
 
             <!-- Metodo GET -->
-            <form id="formulario" method="get">
+            <!-- No pasa nada si no hemos puesto ni el method="GET" y el action="#" -->
+            <form id="formulario" method="get" action="#">
                 <fieldset id="datos_usuario_fieldset">
                     <legend>Datos de usuario</legend>
                     <ul>
@@ -93,16 +94,16 @@
                     -->
                         <label for="numero">Numero</label>
                         <input type="number" id="numero" min="-10" max="10">
-                </fieldset>
-
-                <fieldset id="telefono_fieldset">
-                    <legend>Telefono</legend>
-                    <!-- 
-                        Teléfono, con un control de tipo tel que tenga un valor inicial y que no se pueda editar. 
-                    -->
+                    </fieldset>
+                    
+                    <fieldset id="telefono_fieldset">
+                        <legend>Telefono</legend>
+                        <!-- 
+                            Teléfono, con un control de tipo tel que tenga un valor inicial y que no se pueda editar. 
+                        -->
                         <label for="telefono">Telefono </label>
-                        <span>+34</span>
-                        <input type="text" id="telefono">
+                        <!-- Esto se referia a utilizar el atributo readonly, no a meter un span  -->
+                        <input type="text" id="telefono" value="+34666666666" readonly>
                 </fieldset>
 
                 <fieldset id="termino_de_busqueda_fieldset">
