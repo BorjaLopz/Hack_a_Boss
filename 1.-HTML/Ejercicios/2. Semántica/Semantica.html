@@ -27,12 +27,17 @@
     <body>
         <header id="cabecera-principal">
             <h1>2. Mi página web</h1>
-            <ul>
-                <li><a href="">Página 1</a></li>
-                <li><a href="">Página 2</a></li>
-                <li><a href="">Página 3</a></li>
-                <li><a href="">Página 4</a></li>
-            </ul>
+            <!-- Aqui deberia haber un nav -->
+            <nav>
+
+                <!-- Aqui deberiamos meter un menu ya que es mucho mas semántico -->
+                <menu>
+                    <li><a href="">Página 1</a></li>
+                    <li><a href="">Página 2</a></li>
+                    <li><a href="">Página 3</a></li>
+                    <li><a href="">Página 4</a></li>
+                </menu>
+            </nav>
         </header>
 
         <main>
@@ -58,14 +63,19 @@
                 navegadores actuales han adoptado.
                 </p>
                 
-                <figure id="imagen_wrapper">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Sir_Tim_Berners-Lee_%28cropped%29.jpg/220px-Sir_Tim_Berners-Lee_%28cropped%29.jpg" 
-                    alt="Foto de Tim Berners-Lee"
-                    />
-                    <figcaption>Tim Berners-Lee</figcaption>
-                    <!-- Añadimos pie de pagina  -->
-                    
-                </figure>
+                <!--
+                    Podriamos poner un aside, o un article. 
+                    Si consideramos que continua dando informacion de la section, podria ser otra section
+                -->
+                <article>
+                    <figure id="imagen_wrapper">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Sir_Tim_Berners-Lee_%28cropped%29.jpg/220px-Sir_Tim_Berners-Lee_%28cropped%29.jpg" 
+                        alt="Foto de Tim Berners-Lee"
+                        />
+                        <figcaption>Tim Berners-Lee</figcaption>
+                        <!-- Añadimos pie de pagina  -->                        
+                    </figure>
+                </article>
                 
                 <p>
                     Ante la necesidad de distribuir e intercambiar información acerca de
@@ -96,7 +106,8 @@
                 aplicaciones web y GUIs para muchas aplicaciones móviles (como Firefox
                 OS).
                 </p>
-    
+                
+                <!-- Al igual que en la foto de antes, deberiamos meter un aside o un article. Nunca sabremos porque lo puse aqui y no en el otro de arriba :/ -->
                 <section class="extra-info">
                     <figure>
                         <img
