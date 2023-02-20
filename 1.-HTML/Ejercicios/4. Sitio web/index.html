@@ -7,28 +7,39 @@
     </head>
 
     <body>
+
         <header>
-            <h1>4. Sitio web</h1>
-        </header>
-
-        <main>
-
-            <section id="enlaces"> 
-                <ul>
+            <h1>4. Sitio web</h1>            
+            <!-- Aqui deberia ir un nav y dentro un menu, quedaria tal que asi -->
+            <nav>
+                <menu>
                     <li><a href="./">Sobre mi</a></li>
                     <li><a href="./proyectos.html">Proyectos</a></li>
                     <li><a href="./contacto.html">Contacto</a></li>
+                </menu>
+            </nav>
+
+            <!--             
+            <section id="enlaces"> 
+                <ul>
                 </ul>
             </section>
+            -->
+        </header>
 
+        <main>
+            <!-- Aqui no tendria sentido la section ya que es casi toda la pagina, por lo que podriamos rescindir de esta section y poner directamente el h2, figure y demás -->
             <section id="informacion_general">
+                <!-- Como en este caso hemos metido un h1 para la pagina web, podemos considerar nuestro nombre como h2. Tambien podriamos considerarlo un parrafo especial con alguna clase para luego en el css modificarlo a nuestro gusto -->
                 <h2>Borja López Díaz</h2>
                 
                 <figure>
                     <img src="./Imagenes/Foto_Borja.jpg" alt="Imagen de presentación de Borja Lopez Diaz" height="200">
+                    <!-- Aqui no haria falta poner ningun figcaption -->
                     <figcaption>Imagen de presentacion de Borja López Díaz</figcaption>
                 </figure>
 
+                <!-- Al igual que en la section anterior, como ocupa todo el espacio ahora mismo podriamos prescindir directamente de este article ya que carece de sentido semántico -->
                 <section id="informacion_CV">
                     <h3>Programador</h3>
                     <p>
@@ -46,11 +57,10 @@
                         turpis dui vulputate velit, aliquet vestibulum elit nunc.
                     </p>
 
-                    <p><a href="#">Haz click aqui para ver mi curriculum</a></p>
+                    <!-- Aqui podriamos tener un enlace de descarga y directamente que se descargue nuestro CV. Tambien podriamos tener un enlace a canva.com y que se vea directamente  -->
+                    <p><a href="#" target="_blank">Haz click aqui para ver mi curriculum</a></p>
                 </section>
-
             </section>
-
 
         </main>
 

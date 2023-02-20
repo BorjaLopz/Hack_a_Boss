@@ -1,0 +1,56 @@
+/* Reset */
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cambiamos la fuente para que sea mas legible en Google Chrome */
+html
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 16px;
+}
+
+/* HEADER. Color de fondo, color de letra. Tipo de padding, tamaño de fuentes para h1, h2 y p */
+header
+{
+    background-color: black;
+    color:  white;
+    padding: 40px 3em;
+}
+
+header h1
+{
+    text-transform: capitalize;
+    font-size: 3rem;
+}
+
+header h2
+{
+    text-transform: capitalize;
+    font-size: 1.5rem;
+}
+
+header p
+{
+    font-size: 0.8rem;
+}
+
+/* MAIN */
+main
+{
+    margin: 20px 5rem;
+}
+
+hr
+{
+    height: 5px;
+    background-color: grey;
+}
+
+#main_section h2
+{
+    color: rgb(87, 87, 87);
+}

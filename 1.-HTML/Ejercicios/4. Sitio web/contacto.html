@@ -8,23 +8,38 @@
 
     <body>
         <header>
-            <section id="enlaces"> 
-                <ul>
+            <!-- Aqui deberia ir un nav y dentro un menu, quedaria tal que asi -->
+            <nav>
+                <menu>
                     <li><a href="./">Sobre mi</a></li>
                     <li><a href="./proyectos.html">Proyectos</a></li>
                     <li><a href="./contacto.html">Contacto</a></li>
+                </menu>
+            </nav>
+            
+            <!--             
+            <section id="enlaces"> 
+                <ul>
                 </ul>
-
-                <h1>¿Cómo contactar conmigo? - Borja</h1>
             </section>
+            -->
         </header>
 
+
         <main>
+            <h1>¿Como contactar conmigo?</h1>
             <!-- No añadimos secciones ya que solamente tenemos esta -->
-            <fieldset id="datos_de_contacto">
-                <legend>Mis datos de contacto</legend>
+            <address>
+
                 <p>Enviame un email a <a href="mailto:borja.lpzdz5@gmail.com">borja.lpzdz5@gmail.com</a></p>
                 <p>Llámame al <a href="tel:+34651430400">+ 34 651 430 400</a></p>
+
+            </address>
+
+            <!-- Aqui sobraria el fieldset, ya que solamente se utilizan para agrupar datos de formulario -->
+            <fieldset id="datos_de_contacto">
+                <legend>Mis datos de contacto</legend>
+                <!-- Aqui deberiamos utilizar la etiqueta address -->
                 
                 <!-- Practicamos formularios -->            
                 <fieldset id="formulario_de_contacto">

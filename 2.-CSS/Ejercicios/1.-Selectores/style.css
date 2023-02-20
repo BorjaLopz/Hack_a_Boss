@@ -1,0 +1,83 @@
+/* Cambiamos la fuente para que sea mas legible en Google Chrome */
+html
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Primera lista */
+
+/* Haz que el último li tenga fondo azul. Especifica ese fondo azul usando valores RGB */
+.lista li:last-child
+{
+    background-color: rgb(0, 127, 255);
+}
+
+/* Haz que los li impares tengan el texto subrayado. Haz que el subrayado sea de color verde. */
+.lista li:nth-child(odd)
+{
+    text-decoration: underline green;
+    /* text-decoration: green; */
+}
+
+/* Haz que todos los elementos de la lista aparezcan en una sola línea en lugar de unos debajo de otros y que tengan una separación de 10 píxeles entre unos y otros. */
+.lista li
+{
+    display: inline;
+    margin: 10px;
+}
+
+/* Haz que el li que tiene texto en inglés tenga el tipo de letra del doble de tamaño que los otros y en mayúsculas. */
+.lista li:lang(en)
+{
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+
+/*    Haz que al final de cada li aparezca un emoji diferente sin modificar el html. */
+/* Lo hacemos manualmente uno a uno. Deberia haber alguna forma para iterar sobre ellos  */
+.lista li:nth-child(1):after
+{
+    content: "❤";
+    color: red;
+}
+
+.lista li:nth-child(2):after
+{
+    content: "😊";
+}
+
+.lista li:nth-child(3):after
+{
+    content: "😎";
+}
+
+.lista li:nth-child(4):after
+{
+    content: "😱";
+}
+
+.lista li:nth-child(5):after
+{
+    content: "🤭";
+}
+
+.lista li:nth-child(6):after
+{
+    content: "😮";
+}
+
+
+/* Segunda lista */
+
+/* En lugar de tener puntos a la izquierda de los elementos tenga números romanos. */
+#provincias
+{
+    list-style: lower-roman;
+}
+
+/* Excepto "A Coruña" que no debe tener número romano a la izquierda. */ 
+#provincias li:nth-child(2)
+{
+    list-style: none;
+}

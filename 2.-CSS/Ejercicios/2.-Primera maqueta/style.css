@@ -1,0 +1,88 @@
+/* Cambiamos la fuente para que sea mas legible en Google Chrome */
+html
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* 
+    COLORES 
+
+    h1 y h2(Materiales y Horario): #72acde
+
+    Horario (Cabecera): #72acde
+    Horario zonas pares: #d8e3f5
+    Horario zonas impares: #adc4e7
+
+    Horas zonas pares: #a4bee4
+    Horas zonas impares: #8eaddc
+
+    
+*/
+
+h1
+{
+    background-color: #72acde;
+    color: white;
+    text-align: center;
+}
+
+h2
+{
+    color: #72acde
+}
+
+ul
+{
+    list-style-type: circle;
+}
+
+ul .importante
+{
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+thead
+{
+    /* Le añadimos transparencia "bb" a los titulos de las filas en el color de fondo */
+    background-color: #72acdebb;
+    color: white;
+    /* Cambiamos la fuente */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Horas zonas pares */
+tbody tr:nth-child(odd) th
+{
+    background-color: #a4bee4;
+}
+
+/* Horas zonas impares */
+tbody tr:nth-child(even) th
+{
+    background-color: #8eaddc;
+}
+
+/* Filas pares (Lengua, matemáticas, inglés y descanso) */
+tbody tr:nth-child(odd) td
+{
+    background-color: #d8e3f5;
+}
+
+/*  Filas impares (Francés, Historia, Ciencias, ...) */
+tbody tr:nth-child(even) td
+{
+    background-color: #adc4e7;
+}
+
+
+#descanso
+{
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+
+
