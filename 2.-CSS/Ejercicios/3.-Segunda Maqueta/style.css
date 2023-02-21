@@ -11,13 +11,20 @@ html
 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 16px;
+
+    /* Colores Variables */
+    --ColorHeaderBackground: black;
+    --ColorHeaderLetter: white;
+    --ColorHr: grey;
+    --ColorH2: rgb(87, 87, 87);
+    --ColorFormularioFondo:rgb(134, 133, 133);
 }
 
 /* HEADER. Color de fondo, color de letra. Tipo de padding, tamaño de fuentes para h1, h2 y p */
 header
 {
-    background-color: black;
-    color:  white;
+    background-color: var(--ColorHeaderBackground);
+    color:  var(--ColorHeaderLetter);
     padding: 40px 3em;
 }
 
@@ -30,7 +37,7 @@ header h1
 header h2
 {
     text-transform: capitalize;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 header p
@@ -41,16 +48,86 @@ header p
 /* MAIN */
 main
 {
+    width: 80%;
     margin: 20px 5rem;
 }
 
 hr
 {
-    height: 5px;
-    background-color: grey;
+    height: 1px;
+    background-color: var(--ColorHr);
 }
 
 #main_section h2
 {
-    color: rgb(87, 87, 87);
+    color: var(--ColorH2);
+}
+
+#primerParrafo
+{
+    margin: 1.5rem 0;
+}
+
+img
+{
+    float: right;
+    padding: 1.5rem;
+}
+
+#Formulario h2
+{
+    color: var(--ColorH2);
+    padding-top: 1.5rem;
+}
+
+#main_section h2, #Formulario h2
+{
+    font-size: 2rem;
+}
+
+#unorderedList
+{
+    list-style-type: none;
+}
+
+ul:first-child
+{
+    padding-top: 1.5rem;
+}
+
+ul > li > label
+{
+    /* font-size: 0.8rem; */
+    display: flex;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+ul > li input, ul > li textarea
+{
+    border: none;
+    background-color: var(--ColorFormularioFondo);
+    width: 100%;
+    color: var(--ColorHeaderBackground);
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+ul > li input
+{
+    height: 2.4rem;
+}
+
+ul > li textarea
+{
+    height: 8.8rem;
+    resize: none;
+}
+
+#Boton
+{
+    background-color: black;
+    color: white;
+    height: 2.5rem;
+    width: 7rem;
 }

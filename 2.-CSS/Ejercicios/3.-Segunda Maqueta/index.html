@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="zxx">
+    <!-- Warning al poner el lang="es" ya que aparece Lorem ipsum -->
     <head>
         <title>Formularios</title>
         <meta charset="UTF-8" />
@@ -20,17 +21,42 @@
 
             <section id="main_section">
                 <h2>Título sección</h2>
-                <hr>
-                
+                <hr>                
                 <article>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, modi sunt labore ducimus quisquam reprehenderit voluptatum maiores omnis a! Repellendus qui molestias voluptatum officia? Obcaecati non aspernatur nostrum repudiandae vero facilis ex, animi quia provident? Quae inventore facere nostrum perferendis doloremque similique sit perspiciatis qui dolorem. Aliquid, repudiandae? Repellat autem libero earum voluptate reiciendis, quas omnis rerum enim fuga, corrupti dolorum error quos, hic eaque aliquam sequi doloremque tenetur obcaecati natus fugiat eligendi odit? Beatae rerum molestias quia reprehenderit itaque possimus. Ab quo neque consequuntur distinctio illo, tempora sit. Nihil magni debitis aliquid nemo quibusdam repudiandae illum natus consequatur veritatis.</p>
-
                     <figure>
-                        <img src="./photo.jpg" alt="Figura de mujer sonriendo">
+                        <img src="img/photo.jpg" alt="Figura de mujer sonriendo" height="250">
                     </figure>
+                    <p id="primerParrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, modi sunt labore ducimus quisquam reprehenderit voluptatum maiores omnis a! Repellendus qui molestias voluptatum officia? Obcaecati non aspernatur nostrum repudiandae vero facilis ex, animi quia provident? Quae inventore facere nostrum perferendis doloremque similique sit perspiciatis qui dolorem. Aliquid, repudiandae? Repellat autem libero earum voluptate reiciendis, quas omnis rerum enim fuga, corrupti dolorum error quos, hic eaque aliquam sequi doloremque tenetur obcaecati natus fugiat eligendi odit? Beatae rerum molestias quia reprehenderit itaque possimus. Ab quo neque consequuntur distinctio illo, tempora sit. Nihil magni debitis aliquid nemo quibusdam repudiandae illum natus consequatur veritatis.</p>
+
                     
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti alias quam rerum necessitatibus temporibus exercitationem in enim dolores nostrum laborum, ipsum et debitis officiis consectetur reiciendis illo dolor architecto, quae beatae earum quod accusamus delectus fuga sit. Odio ab amet vero iste, fuga quia officiis alias sint necessitatibus dignissimos dolore.</p>
                 </article>
+            </section>
+
+            <section id="Formulario">
+                <h2>Formulario</h2>
+                <hr>
+                <form id="form" action="#" method="get">
+                    <ul id="unorderedList">
+                        <li>
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </li>
+
+                        <li>
+                            <label for="direccion">Direccion</label>
+                            <input type="text" id="direccion" name="direccion" required>
+                        </li>
+
+                        <li>
+                            <label for="comentarios">Comentarios</label>
+                            <textarea name="textarea" id="comentarios" cols="30" rows="10"></textarea>
+                        </li>
+                    </ul>
+
+                    <button id="Boton">Enviar</button>
+                </form>
+
             </section>
 
 
