@@ -1,0 +1,51 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header
+{
+    background-color: black;
+    color: white;
+    padding: 3rem;
+    text-align: center;
+}
+
+nav
+{
+    background-color: gray;
+    position: sticky;
+    top: 0;
+}
+
+li
+{
+    list-style: none;
+    display: inline-block;
+    /* border: 1px solid black; */
+}
+
+nav a 
+{
+    padding: 0.5rem 1rem;
+    display: block;
+    width: auto;
+    color: white;
+}
+
+nav a:hover
+{
+    background-color: lightgrey;
+}
+
+main
+{
+    background-image: url("http://source.unsplash.com/random");
+    height: 200vh;
+}
