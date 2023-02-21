@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Horario para clase</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>CSS para tablas</h1>
+        </header>
+
+        <main>
+            <table>
+                <caption>
+                    Horario de clase
+                </caption>
+
+                <thead>
+                    <tr>
+                        <th>Horas</th>
+                        <th>Lunes</th>
+                        <th>Martes</th>
+                        <th>Mércoles</th>
+                        <th>Jueves</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th>9-10</th>
+                        <td>HTML</td>
+                        <td rowspan="6" class="especial">Práctica</td>
+                        <td>HTML</td>
+                        <td>HTML</td>
+                    </tr>
+                    <tr>
+                        <th>10-11</th>
+                        <td>CSS</td>
+                        <td>CSS</td>
+                        <td>JS</td>
+                    </tr>
+                    <tr>
+                        <th>11-12</th>
+                        <td>JS</td>
+                        <td>JS</td>
+                        <td>SQL</td>
+                    </tr>
+                    <tr>
+                        <th>16-17</th>
+                        <td>SQL</td>
+                        <td>NodeJS</td>
+                        <td>NodeJS</td>
+                    </tr>
+                    <tr>
+                        <th>17-18</th>
+                        <td>React</td>
+                        <td>React</td>
+                        <td>React</td>
+                    </tr>                    
+                </tbody>
+                
+                <tfoot>
+                    <tr>
+                        <th>18-19</th>
+                        <td colspan="4" class="especial">Tutorías</td>
+
+                </tfoot>
+            </table>
+        </main>
+    </body>
+</html>

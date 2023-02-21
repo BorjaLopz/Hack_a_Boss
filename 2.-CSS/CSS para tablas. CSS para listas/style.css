@@ -1,0 +1,60 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    background-color: darkslategrey;
+    color: white;
+    padding: 3rem;
+}
+
+
+table
+{
+    width: 100%;
+    font-family: sans-serif;
+    /* Unimos el borde cada celda para que quede mejor */
+    border-collapse: collapse;
+    /* Hacemos que el ancho de las columnas sea equiparables. Cada una de ellas ocupara lo mismo que la entra, independientemente del texto que contiene cada celda. Para comprobarlo, ponemos 2 veces miercoles para verlo mas claramente. */
+    table-layout: fixed;
+    max-width: 800px;
+    margin: 1rem auto;
+}
+
+table caption
+{
+    background-color: black;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+th
+{
+    background-color: black;
+    color: white;
+}
+
+table tbody tr:nth-child(even)
+{
+    background-color: lightgray;
+}
+
+table td.especial
+{
+    background-color: lightgray;
+    text-align: center;
+}
+
+th, td
+{
+    border: 1px solid gray;
+    padding: 1rem;
+}
