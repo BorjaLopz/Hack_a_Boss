@@ -1,0 +1,62 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+html
+{
+    /* De esta manera si solo cambiamos las propiedades aqui del articulo CSS, todo cambiara de manera armoniosa ya que estan aqui declaradas las varibales globales del archivo. Tambien se pueden sobreescribir */
+    --colorPrincipal: rgb(119, 19, 119);
+    --colorSecundario: rgb(155, 155, 238);
+    --sombra: 2px 2px 3px var(var(--colorPrincipal));
+
+    --espaciado: 1rem;
+}
+
+/* Ejemplo de como modificar dichos valores, para cuando queramos por ejemplo un "modo noche" en nuestra pagina web */
+html.dark
+{
+    --colorPrincipal: rgb(240, 194, 240);
+    --colorSecundario: rgb(0, 0, 255);
+    color:white;
+}
+
+header
+{
+    background-color: black;
+    color: var(--colorPrincipal);
+    padding: calc(var(--espaciado)*3);
+    text-align: center;
+
+    box-shadow: var(--sombra);
+}
+
+main
+{
+    background-color: var(--colorPrincipal);
+}
+
+h2
+{
+    color: var(--colorSecundario);
+    margin: var(--espaciado);
+    text-shadow: var(--sombra);
+}
+
+article
+{
+    background-color: var(--colorSecundario);
+    color: var(--colorPrincipal);
+    padding: calc(var(--espaciado)*2);
+    margin: var(--espaciado);
+
+    box-shadow: var(--sombra);
+
+}

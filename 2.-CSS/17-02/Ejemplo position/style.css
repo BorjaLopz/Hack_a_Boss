@@ -17,29 +17,31 @@ header
     text-align: center;
 }
 
-nav
+body > nav
 {
-    background-color: gray;
+    background-color: rgb(87, 87, 87);
     position: sticky;
     top: 0;
+    z-index: 1;
 }
 
-li
+body > nav li
 {
     list-style: none;
     display: inline-block;
     /* border: 1px solid black; */
 }
 
-nav a 
+menu a, #arriba
 {
     padding: 0.5rem 1rem;
     display: block;
     width: auto;
     color: white;
+    text-align: center;
 }
 
-nav a:hover
+menu a:hover, #arriba:hover
 {
     background-color: lightgrey;
 }
@@ -48,4 +50,28 @@ main
 {
     background-image: url("http://source.unsplash.com/random");
     height: 200vh;
+}
+
+#arriba
+{
+    /* Esto nos servira para hacer el tipico boton de volver a arriba, como vemos en el ejemplo */
+    background: gray;
+    position: fixed;
+    right: 0;
+    bottom: 3rem;
+}
+
+main  menu
+{
+    list-style: none;
+    width: 10rem;
+    background-color: gray;
+    position: absolute;
+    right: 0;
+    /* z-index: -1; */
+}
+
+main  menu.hidden
+{
+    right: -10rem;
 }

@@ -1,0 +1,94 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 16px;
+}
+
+header
+{
+    background-color: black;
+    color: white;
+    padding: 3rem;
+    text-align: center;
+    font-size: 24px;
+}
+
+main
+{
+    padding: 1rem;
+}
+
+@media (min-width : 500px)
+{
+    /* Aqui vamos a meter todo lo que queramos cambiar para las cosas midan mas de 500px */
+    /* Esto se utiliza sobretodo para hacer primero la maquetacion movil, siguiendo las normas de cascada*/
+    body
+    {
+        background-color: rgb(120, 156, 231);
+    }
+
+    header
+    {
+        background-color: rgb(43, 43, 189);
+    }
+
+    html
+    {
+        font-size: 14px;
+    }
+}
+
+@media (min-width : 600px)
+{
+    header 
+    {
+        background-color: blueviolet;
+    }
+
+    html
+    {
+        font-size: 18px;
+    }
+}
+
+@media (min-width : 900px)
+{
+    body 
+    {
+        background-color: rgb(255, 255, 255);
+    }
+
+    html
+    {
+        font-size: 20px;
+    }
+    
+    main
+    {
+        color: black;
+        margin: auto;
+        width: 80%;
+
+    }
+}
+
+@media print
+{
+    body
+    {
+        font-family: sans-serif;
+        color: black;
+        background-color: white;
+    }
+    header{
+        background-color: white;
+        color: black;
+    }
+}
