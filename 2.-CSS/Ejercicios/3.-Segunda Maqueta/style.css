@@ -116,12 +116,14 @@ ul > li input, ul > li textarea
 ul > li input
 {
     height: 2.4rem;
+    padding: 0.4rem;
 }
 
 ul > li textarea
 {
     height: 8.8rem;
     resize: none;
+    padding: 0.4rem;
 }
 
 #Boton
