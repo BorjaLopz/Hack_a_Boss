@@ -1,0 +1,52 @@
+/* Reset */
+*
+{
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header
+{
+    background-color :darkslategrey;
+    color: white;
+    height: 10rem;
+    /* De esta manera vamos a pode centrar todo el elemento (aunque en este caso se visibilice es el texto) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul
+{
+    display: flex;
+}
+
+article
+{
+    width: 10rem;
+    height: 18rem;
+    background-color: rgb(191, 222, 233);
+    border-radius: 2rem;
+    overflow: hidden;
+    border: 1px solid rgb(134, 134, 134);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.514);
+}
+
+article *:not(img)
+{
+    margin: 0.5rem 1rem;
+}
+
+img
+{
+    width: 100%;
+    height: 7rem;
+    /* Asi no se deforma la imagen */
+    object-fit: cover;
+}

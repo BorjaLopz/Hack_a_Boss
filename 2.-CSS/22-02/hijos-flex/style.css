@@ -1,0 +1,84 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header
+{
+    text-align: center;
+    color: white;
+    background-color: black;
+    padding: 3rem;
+}
+
+div
+{
+    border: 1px solid black;
+    height: 10rem;
+    width: 10rem;
+    background-color: lightblue;
+    text-align: center;
+    /* margin: 1rem; */
+}
+
+main
+{
+    border: 3px solid blue;
+
+    /* Por defecto el eje principal es el horizontal */
+    display: flex;
+
+    /* Aqui le estamos diciendo cual es el eje principal. Por defecto sera la fila, le podemos indicar que queremos que sea en modo columna*/
+    flex-direction: row;
+
+    /* Por defecto es no-wrap. Si queremos que no haya overflow, si le damos a wrap, esto colocará los elementos y los distribuirá por donde considere para que no "sobren"
+    flex-wrap: wrap;
+
+    /* Con esta propiedad ajustamos como queremos que se ajuste el contenido sobrante 
+    justify-content: space-between;
+
+    /* Solo tiene sentido utilizar estas dos propiedades juntas cuando los elementos que vayamos ajustar tengan distinto tamaño. Aun asi cada una de ellas provoca distintos efectos 
+    align-items: center;
+    align-content: space-evenly; */
+
+    /* CONSEJO. Tenemos que probar con las 3 propiedades hasta que consigamos el efecto que queramosP */
+
+    height: 90vh;
+}
+
+div:nth-child(2)
+{
+    /* Con esta propiedad hacemos que no encoja nada */
+    flex-shrink: 5;
+    flex-grow: 2;
+    /* Podemos modificar el orden de cada elemento con esta propiedad */
+    order: -1;
+
+    align-self: flex-end;
+}
+
+div:nth-child(4)
+{
+    /* Hacemos que enconja el doble de rapido que el resto de elementos */
+    flex-shrink: 2;
+    flex-grow: 1;
+}
+
+div:nth-child(6)
+{
+    /* Hacemos que encoja 6 veces más rapido que el resto de elementos */
+    flex-shrink: 6;
+}
+
+div:nth-child(even)
+{
+    align-self: stretch;
+}
+

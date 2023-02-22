@@ -1,0 +1,55 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1
+{
+    color: blue;
+    transition: color 1s;
+}
+
+h1:hover
+{
+    color: blueviolet;
+
+}
+
+div
+{
+    border: 1px solid;
+    height: 10rem;
+    width: 10rem;
+    background-color: red;
+
+    /* Transition */
+    transition-property: background-color, font-size, color;
+    transition-duration: 1s, 0.5s;
+    transition-timing-function: ease-in;
+    transition-delay: 2s, 0;
+}
+
+div:hover
+{
+    background-color: blue;
+    font-size: 2rem;
+    color: white;
+}
+
+p
+{
+    transition: opacity 500ms;
+    background-color: black;
+    color: white;
+}
+p:hover
+{
+    opacity: 0;
+}
