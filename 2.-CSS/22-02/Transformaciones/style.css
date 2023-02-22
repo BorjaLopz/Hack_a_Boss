@@ -1,0 +1,45 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+header
+{
+    background-color:darkslategrey;
+    color: white;
+    /* De esta manera vamos a pode centrar todo el elemento (aunque en este caso se visibilice es el texto) */
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    height: 10rem;
+}
+
+div
+{
+    height: 5rem;
+    width: 5rem;
+    border: 1px solid;
+
+    margin-bottom: 5rem;
+}
+
+#translate:hover
+{
+    transform: translate(2rem, 3rem);
+}
+
+#scale:hover
+{
+    /* Podemos meterle dos medidas, una en horizontal y otra en vertical */
+    transform: scale(1.5);
+}
+
+#rotation.hover
+{
+    transform: rotate(90deg);
+}

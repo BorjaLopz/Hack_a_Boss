@@ -1,0 +1,55 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    --espaciado: 1rem;
+    /* --alturaHeader: 5rem; */
+    --alturaHeader: min(20vw, 200px);
+}
+header
+{
+    background-color:darkslategrey;
+    color: white;
+    /* De esta manera vamos a pode centrar todo
+     el elemento (aunque en este caso se visibilice es el texto) */
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    height: 10rem;
+}
+
+main
+{
+    background-color: aquamarine;
+    height: calc(100vh - 5rem);
+    height: calc(100vh - var(--alturaHeader));
+    margin: auto;
+    /* width: min(80%, 500px);
+    width: max(200px, min(80%, 500px)); */
+    width: clamp(300px, 75%, 700px);
+}
+
+p
+{
+    padding: calc(var(--espaciado)*2) var(--espaciado);
+}
+
+h1
+{
+    /* Entre los 2 valores, escoge el mas grande */
+    font-size: max(2rem, 12vw);
+}
+
+/* Todo lo que tenga este atributo, nos da igual su valor */
+[data-author]::after
+{
+    /* Con la funcion "attr" podremos leer el valor de cualquier atributo. Aunque en HTML y CSS lo unico que nos va a hacer falta leer son los data-author */
+    content: " -" attr(data-author);
+    font-size: 0.7rem;
+    font-style: italic;
+}

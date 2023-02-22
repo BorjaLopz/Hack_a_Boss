@@ -1,0 +1,67 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+header
+{
+    background-color:darkslategrey;
+    color: white;
+    /* De esta manera vamos a pode centrar todo el elemento (aunque en este caso se visibilice es el texto) */
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    height: 10rem;
+}
+
+@keyframes titulo
+{
+    from
+    {
+        color: blue;
+        transform: translate(2rem);
+        font-size: 5rem;
+    }
+
+    to
+    {
+        color: red;
+        transform: translate(10rem);
+    }
+}
+
+h1
+{
+    /* Animacion */
+    animation: titulo 2s ease 2s;
+
+    /*  Animacion desgranada*/
+    animation-name: titulo;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-delay: 2s;
+    animation-iteration-count: 3;
+
+    animation-direction: alternate;
+
+    animation-fill-mode: both;
+}
+
+@keyframes tamano
+{
+    50%
+    {
+        font-size: 2rem;
+        color: red;
+    }
+}
+
+p
+{
+    animation: tamano 1s ease 2s;
+}
