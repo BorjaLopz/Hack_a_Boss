@@ -1,0 +1,82 @@
+/* Reset */
+*
+{
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* background-color: red; */
+}
+
+header
+{
+    background-color :rgb(79, 47, 75);
+    color: white;
+    height: 10rem;
+
+    /* De esta manera vamos a pode centrar todo el elemento (aunque en este caso se visibilice es el texto) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* margin-bottom: 2rem; */
+}
+
+main
+{
+    border: 1px solid blue;
+    height: 80vh;
+
+    display: grid;
+    
+    /* Generamos la grid explicita */
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+
+    /* De esta manera no empujara cada elemento, sino que se conmutara elemento a elemento */
+    grid-auto-flow: dense;
+}
+
+div
+{
+    border:1px solid;
+    background-color: lightblue;
+}
+
+div:nth-child(1)
+{
+    grid-column: 2;
+}
+
+div:nth-child(2)
+{
+    grid-column: 2;
+    grid-row: 4;
+    grid-column: span 2;
+}
+
+div:nth-child(3)
+{
+    /* Los numeros negativos solo nos serviran para la grid EXPLICITA, nunca la implicita */
+    grid-column-end: -1;
+    grid-row-end: -1;
+}
+
+div:nth-child(4)
+{
+    grid-row: 2;
+}
+
+div:nth-child(5)
+{
+    grid-row: 2;
+    grid-column: 3 / 5;
+    /* Esto es equivalente entre si */
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+

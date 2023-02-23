@@ -1,0 +1,42 @@
+/* Reset */
+*
+{
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* background-color: red; */
+}
+
+header
+{
+    background-color :rgb(48, 47, 79);
+    color: white;
+    height: 10rem;
+
+    /* De esta manera vamos a pode centrar todo el elemento (aunque en este caso se visibilice es el texto) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* margin-bottom: 2rem; */
+}
+
+main
+{
+    display: grid;
+    grid-template-columns: 150px 1fr minmax(10vw, 300px);
+    grid-template-rows: minmax(150px, 3fr) repeat(2, 100px);
+    grid-auto-rows: 100px;
+
+    min-height: 100vh;
+}
+
+div
+{
+    border: 1px solid;
+}

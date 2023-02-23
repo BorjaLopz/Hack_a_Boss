@@ -1,0 +1,90 @@
+/* Reset */
+*
+{
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* background-color: red; */
+}
+
+header
+{
+    background-color :rgb(79, 47, 47);
+    color: white;
+    height: 10rem;
+
+    /* De esta manera vamos a pode centrar todo el elemento (aunque en este caso se visibilice es el texto) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* margin-bottom: 2rem; */
+}
+
+main
+{
+    /* CREAMOS LA GRID */
+    display: grid;
+    height: 600px;
+    /* Creamos un grid de 3 x 3 */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    grid-template-areas: 
+    "corazones corazones corazones"
+    "treboles picas picas"
+    "treboles diamantes diamantes";
+
+    /* Nos tenemos que imaginar el texto de arriba como una representacion de un tablero 3 x 3 */
+
+    grid-auto-rows: 50px;
+
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+#treboles
+{
+    background-color: green;
+    color: white;
+    grid-area: treboles;
+}
+
+#corazones
+{
+    background-color: red;
+    color: white;
+    grid-area: corazones;
+}
+
+#picas
+{
+    background-color: black;
+    color: white;
+    grid-area: picas;
+}
+
+#diamantes
+{
+    background-color: cadetblue;
+    color: white;
+    grid-area: diamantes;
+}
+
+@media (min-width: 600px)
+{
+    main
+    {
+        grid-template-areas: 
+        "X picas picas"
+        "treboles corazones corazones"
+        "treboles corazones corazones"
+        "diamantes diamantes diamantes";
+    }
+}

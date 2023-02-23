@@ -1,0 +1,119 @@
+/* Reset */
+*
+{
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* background-color: red; */
+}
+
+header
+{
+    background-color :rgb(48, 47, 79);
+    color: white;
+    height: 10rem;
+
+    /* De esta manera vamos a pode centrar todo el elemento (aunque en este caso se visibilice es el texto) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* margin-bottom: 2rem; */
+}
+
+main
+{
+    border: 2px solid blue;
+
+    height: 600px;
+    /* De primeras parece que no pasa nada. Realmente si, pero aun no lo vemos */
+    /* Los items son los hijos a los que afecta grid, al igual que flex.  */
+    /* Aqui SI tenemos control absoluto de los dos ejes, X e Y */
+    display: grid;
+    /* Esta grid es la grid "explicita" la que aunque no haya elementos estará.  */
+    grid-template-columns: 200px 10rem 20%;
+    grid-template-rows: 100px 5rem 10vh;
+    /* Aunque borremos todos los divs, podremos ver en la pagina web que sigue estando grid con las dimensiones de la grid que hemos generado. */
+
+    /* Hay elementos que sobran, y con esta propiedad  podemos ajustar donde queremos que se generen. Por defecto esta en "row" pero lo podemos dar otro valor como "columns" para que se generen en modo columnas */
+    grid-auto-flow: row;
+
+    /* Para ajustar el tamaño de las casillas que se generan, podremos utilizar esta propiedad para que se adapten al tamaño que nosotros queramos.  */
+    /* Cuando metemos dos valores a "grid-auto-rows" lo que hará es ajustar el tamaño de la primera fila de celdas con el primer valor que le metemos, la siguiente fila con el segundo valor que le hayamos metido y se repetirá hasta terminar con todas las filas de las celdas del grid. */
+    grid-auto-rows: 50px 2rem;
+    /* Si explicitamente le metemos un valor, por ejemplo 10px, podremos tener overflow. Si lo dejamos en auto nunca pasará */
+
+    /* Contenido */
+    /* Alineamos en horizontal */
+    justify-content: space-evenly;
+    /* Alineamos en vertical */
+    align-content: space-between;
+
+    /* Items */
+    /* Tiene que sobrar espacio en la celda, o el area, para poder mover las cosas */
+    justify-items: center;
+    align-items: baseline;
+    
+}
+
+div
+{
+    border: 1px solid black;
+}
+
+div:nth-child(8)
+{
+    font-size: 1.5rem;
+}
+
+div:nth-child(10)
+{
+    align-self: end;
+    justify-self: end;
+
+    margin: 1rem;
+}
+
+div:nth-child(18)
+{
+    order: -1;
+}
+
+div:nth-child(7)
+{
+    order: 1;
+}
+
+ul
+{
+    border: 2px solid blueviolet;
+    margin-top: 5rem;
+    height: 500px;
+    display: grid;
+    list-style: none;
+/* 
+    grid-template-columns: 150px auto;
+    grid-template-rows: 150px auto; */
+
+    /* fr se refier a espacio fraccionada. Dividimos el espacio en 3, al primero le damos una porcion, y al segundo dos porciones.  */
+    /* Esto lo podemos hacer incluso combinando medidas, por ejemplo: grid-template-columns: 1fr 100px 3fr. Esto significa que la segunda celda medirá 100px, y el espacio sobrante lo dividiremos en 4 trozos iguales, al primero le damos 1 trozo y al tercero 3 trozos. */
+    grid-template-columns: 1fr auto 2fr;
+
+    grid-template-rows: 100px auto 1fr;
+
+    align-items: center;
+    justify-content: center;
+}
+
+li
+{
+    border: 1px solid;
+    background-color: aquamarine;
+    height: 50px;
+    width: 50px;
+}
