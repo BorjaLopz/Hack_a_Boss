@@ -1,0 +1,38 @@
+@import url(base.css);
+html
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body > header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+header form, header h1{
+    align-self: center;
+}
+
+menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+/*
+header nav{
+    justify-content: flex-end;
+} */
+
+/* body
+{
+    display: grid;
+    grid-template-rows: 5rem;
+}
+
+body nav, body main
+{
+    display: grid;
+    grid-template-columns: 20rem 60rem;
+} */
