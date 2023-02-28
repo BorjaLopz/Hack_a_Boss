@@ -43,10 +43,10 @@ main
     /* Nos tenemos que imaginar el texto de arriba como una representacion de un tablero 3 x 3 */
 
     grid-auto-rows: 50px;
-
+/* 
     justify-content: center;
     justify-items: center;
-    align-items: center;
+    align-items: center; */
 }
 
 #treboles

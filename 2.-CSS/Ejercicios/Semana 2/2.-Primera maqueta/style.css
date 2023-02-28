@@ -51,6 +51,17 @@ thead
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+/* Lo mejor seria darle un color de fondo a todo el tbody y luego sobreescribir los pares o impares segun nos interese  */
+
+body
+{
+    font-family: sans-serif;
+    min-width: 600px;
+    max-width: 800px;
+    margin: auto;
+}
+
+
 /* Horas zonas pares */
 tbody tr:nth-child(odd) th
 {
@@ -81,6 +92,12 @@ tbody tr:nth-child(even) td
     text-align: center;
     font-weight: bold;
     text-transform: uppercase;
+}
+
+/* Añadimos espaciado en la tabla */
+tr > *
+{
+    padding: 0.5rem;
 }
 
 

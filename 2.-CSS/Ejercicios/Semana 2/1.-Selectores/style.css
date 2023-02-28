@@ -23,10 +23,19 @@ html
 .lista li
 {
     display: inline;
+    /* Para hacer que sean 10px, tendriamos que haber puesto margin:5px; ya que los margin no solapan. De esta manera estariamos haciendo una separación de 20px */
     margin: 10px;
 }
 
 /* Haz que el li que tiene texto en inglés tenga el tipo de letra del doble de tamaño que los otros y en mayúsculas. */
+/* ZOE */
+.lista li[lang="en"]
+{
+    font-size: 200%;
+    text-transform: uppercase;
+}
+
+/* Con pseudo-clase */
 .lista li:lang(en)
 {
     font-size: 2rem;
