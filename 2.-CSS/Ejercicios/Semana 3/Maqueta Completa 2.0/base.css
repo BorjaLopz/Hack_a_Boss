@@ -125,16 +125,16 @@ footer a {
   width: max-content;
 }
 
-/* MEDIA QUERY */
+/* MEDIA QUERY
 @media (min-width: 600px) {
-  /* HEADER */
+  /* HEADER 
 
   header {
     z-index: 1;
     padding: 0 2rem;
   }
 
-  /* NAV */
+  /* NAV 
 
   body > nav {
     padding-top: 1rem;
@@ -144,5 +144,5 @@ footer a {
     text-align: left;
     padding-left: 0.5rem;
   }
-}
+} */
 
