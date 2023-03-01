@@ -11,15 +11,15 @@ body
     --espaciadoFooter: 2rem;
     display: grid;
     width: auto;
+    height: auto;
 
     /* Vertical */
-    grid-template-columns: 100%;
+    /* grid-template-columns: 100%; */
 
     /* Horizontal */
-    grid-template-rows: var(--espaciadoHeader) calc(100% - var(--espaciadoHeader - var(--espaciadoFooter)) var(--espaciadoFooter));
+    /* grid-template-rows: var(--espaciadoHeader) 100%var(--espaciadoFooter); */
 
     min-height: 100vh;
-
     min-width: 320px;
 
 }
@@ -33,9 +33,6 @@ header
     justify-content: space-evenly;
     align-items: center;
     flex-grow: 0;
-
-    /* grid-row-start: 1;
-    grid-row-end: 2; */
 }
 
 header menu
@@ -51,16 +48,22 @@ header menu > li a{
 
 /* MENU HORIZONTAL */
 body nav[aria-label="categorias"] {
+    grid-row-start: 2;
     height: 2rem;
     flex-grow: 0;
 }
 body nav[aria-label="categorias"] menu{
     display: flex;
     align-items: center;
+    height: auto;
 }
 
+/* MAIN */
 main
 {
+    grid-row-start: 3;
+    min-height: 80vh;
+    height: 100%;
     flex-grow: 1;
     display: flex;
     flex-wrap: wrap;
@@ -68,6 +71,47 @@ main
     gap: 1rem;
 }
 
+main article {
+    display: grid;
+    grid-template-rows: 50% 15% 30% 5%;
+}
+
+article img {
+    grid-column-start: 1;
+    height: 100%;
+    
+}
+
+article h2 {
+    grid-row-start: 2;
+    align-self: center;
+    padding: 1rem 0 0 0;
+    /* font-size: 80%; */
+}
+
+/* Hacemos que el tamaño de la fuente sea mas pequeño */
+article p{
+    font-size: 85%;
+}
+
+/* En caso de que tengan una descripcion muy grande, haremos que el overflow se oculte */
+article p.description {
+    /* grid-row-start: 3; */
+    overflow:auto;
+}
+
+/* Hacemos que en caso de tener overflow desaparezcan las barras de scroll */
+article p.description::-webkit-scrollbar{
+    display: none;
+}
+
+article p.price {
+    align-self: center;
+    /* grid-row-start: 4; */
+}
+
+
+/* FOOTER */
 footer
 {
     flex-grow: 0;
@@ -114,8 +158,6 @@ footer
         justify-content: space-between;
         padding: 0 2rem;
         align-items: center;
-
-        /* margin: 0 2rem; */
     }
 
     header menu{
@@ -134,10 +176,7 @@ footer
 
     /* MENU HORIZONTAL */
     body nav[aria-label="categorias"] {
-        /* background-color: blue; */
         height: auto;
-        /* width: auto ; */
-        /* width: var(--espaciadoMenuLado); */
         grid-row-start: 2;
         grid-column-start: 1;
         display: flex;
@@ -156,7 +195,6 @@ footer
 
     } 
     
-
 
     /* FOOTER */
     footer{
