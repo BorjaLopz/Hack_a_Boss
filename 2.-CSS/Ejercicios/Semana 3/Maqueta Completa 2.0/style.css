@@ -87,12 +87,13 @@ footer
         --espaciadoF: 2rem;
         --espaciadoH: 5rem;
         display: grid;
+        
+        /* Horizontal */
+        grid-template-rows: var(--espaciadoH) calc(100% - var(--espaciadoH) - var(--espaciadoF)) var(--espaciadoF);
 
         /* Vertical */
         grid-template-columns: var(--espaciadoMenuLado) calc(100% - var(--espaciadoMenuLado));
 
-        /* Horizontal */
-        grid-template-rows: var(--espaciadoH) calc(100% - var(--espaciadoH) - var(--espaciadoF)) var(--espaciadoF);
 
         width: auto;
     }
@@ -102,20 +103,24 @@ footer
         z-index: 1;
         height: var(--espaciadoH);
         width: auto;
-        grid-column-start: 1 / span 2;
-        background-color: black;
+
+        /* Colocamos el header en la celda [1][1] y que se espanda a la celda [1][3] */
+        grid-column-start: 1;
+        grid-column-end: 3;
         grid-row-start: 1;
+
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
+        padding: 0 2rem;
         align-items: center;
+
+        /* margin: 0 2rem; */
     }
 
     header menu{
-
-    }
-
-    header menu > li a{
-
+        /* 1rem de distancia entre iconos */
+        gap: 1rem;
     }
 
     /* MAIN */
@@ -129,27 +134,39 @@ footer
 
     /* MENU HORIZONTAL */
     body nav[aria-label="categorias"] {
-        background-color: blue;
+        /* background-color: blue; */
         height: auto;
-        width: var(--espaciadoMenuLado);
+        /* width: auto ; */
+        /* width: var(--espaciadoMenuLado); */
         grid-row-start: 2;
         grid-column-start: 1;
         display: flex;
-        /* flex-direction: column; */
-        
+        justify-content:left;
+        padding: 1rem 0;
     }
+
     body nav[aria-label="categorias"] menu{
+        width: var(--espaciadoMenuLado);
         flex-direction: column;
-        justify-content: right;
     }
+        
+    body nav[aria-label="categorias"] menu li a{
+        text-align: left;
+        padding-left: 1rem;
+
+    } 
+    
+
 
     /* FOOTER */
     footer{
         height: var(--espaciadoF);
         grid-row-start: 3;
-        grid-column-start: 2;
+        grid-column-start: 1;
+        grid-column-end: 3;
         display: flex;
         justify-content: center;
+        align-items: center;
         gap: 2rem;
 
     }
