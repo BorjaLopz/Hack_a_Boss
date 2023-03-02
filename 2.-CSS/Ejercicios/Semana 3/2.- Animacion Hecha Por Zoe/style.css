@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+button {
+    width: 5rem;
+    height: 5rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+svg {
+    fill: gray;
+}
+
+html
+{
+    /*  Variables */
+    --TamanoInicial: 1;
+    --TamanoFinal: 1.2;
+    --ColorFinal: red;
+
+}
+
+/* Crea a partir de aquí tu CSS */
+
+.like {
+    animation: CambioColor 500ms ease;
+
+    /* De esta manera hacemos que cuando termine la animacion se quede directamente como acabe. En este caso en color rojo y del tamaño inicial */
+    animation-fill-mode: forwards;
+}
+
+@keyframes CambioColor {
+
+    25%{
+        transform: scale(1.2);
+    }
+
+    50%{
+        transform: scale(1);
+    }
+
+    75%{
+        transform: scale(1.2);
+    }
+
+    100%{
+        /* Este transform es omitible ya que al terminar vuelve a su estado natural */
+        transform: scale(1);
+        fill: red;
+    }
+
+}

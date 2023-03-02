@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Cookie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
+/* Reset */
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html
+{
+    font-family: 'Climate Crisis', cursive;
+}
+
+
+/* Hacemos el grid */
+body
+{
+    --espaciadoNavHeader: 2rem;
+    --espaciadoHeader: 10rem;
+    --espaciadoFooter: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 2rem 10rem calc(100% - ((var(--espaciadoNavHeader)) + (var(--espaciadoHeader)) + (var(--espaciadoFooter)))) 2rem;
+
+    width: auto;
+    height: auto;
+
+    min-width: 100vh;
+    min-height: 300px;
+
+}
+
+/* Menu superior */
+nav{
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-column-end: -1;
+}
+
+nav menu {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav menu li {
+    list-style: none;
+}
+
+nav menu li a {
+    text-decoration: none;
+}
+
+/* Header de la pagina */
+body header {
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: -1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1
+{
+    text-transform: uppercase;
+    word-spacing: 3rem;
+    letter-spacing: 0.5rem;
+}
+
+/* Main */
+main {
+    grid-row-start: 3;
+    grid-column-start: 1;
+    grid-column-end: -2;  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+/* Article */
+article {
+    background-color: beige;
+    border-radius: 20px 5rem;
+    overflow: hidden;
+    border: 1px solid rgb(173, 173, 169);
+    box-shadow: 0 0 20px rgb(173, 173, 169);
+
+    display: grid;
+    grid-template-rows: 60% 15% 25%;
+}
+
+article h2 {
+    justify-self: left;
+}
+
+article > p {
+    flex-grow: 1;
+    align-self: flex-start;
+    font-size: 1.5rem;
+    font-family: 'Tilt Neon', cursive;
+}
+
+article > h2 {
+    font-family: 'Tilt Meon', cursive;
+    text-transform: uppercase;
+    font-size: 3rem;
+    justify-self: right;    
+}
+
+article *:not(img){
+    max-width: 400px;
+    margin: 2rem 1rem;
+
+}
+
+img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+/* Aside */
+aside {
+    grid-column-start: 3;
+    display: flex;
+    flex-direction: column;
+
+    max-height: 800px;
+}
+
+/* Footer */
+footer { 
+    grid-row-start: 4;
+    grid-row-end: 4;
+
+    grid-column-start: 1;
+    grid-column-end: -1;
+
+    display: flex;
+
+    justify-content: space-around;
+
+}
