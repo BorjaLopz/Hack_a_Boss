@@ -37,7 +37,7 @@ for(let i = 0; i < 24; i++)
     /* Comprobamos que sea la hora que nos piden */
     if(i >= 8 && i <= 22)
     {
-        /* Monstramos por pantalla con console.log y llamando directamente a las funciones */
+        /* Mostramos por pantalla con console.log y llamando directamente a las funciones */
         console.log(
             `Son las ${i}:00. ${addStringXTimes(
             howManytTimesDoesItRepeat(i),
