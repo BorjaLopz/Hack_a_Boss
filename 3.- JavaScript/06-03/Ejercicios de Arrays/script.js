@@ -8,8 +8,23 @@ let arr4 = ["rojo", "azul", "verde", "amarillo"]; //false
 
 function comparar(arrA, arrB) 
 {
-      //logica de la compracion
+    if(arrA.length === arrB.length)
+    {
+        for(let i = 0; i < arrA.length; i++)
+        {
+            if(arrA[i] !== arrB[i])
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
+
 console.log(comparar(arr1, arr2)); //true
 console.log(comparar(arr1, arr3)); //false
 console.log(comparar(arr1, arr4)); //false
