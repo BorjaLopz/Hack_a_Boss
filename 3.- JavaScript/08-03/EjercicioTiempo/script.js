@@ -4,17 +4,13 @@
 
 //Crea un temporizador que muestre por consola "DING!" al cabe de 10 segundos
 
-setTimeout(() => {console.log("DING!")
-    
-}, 10000);
+setTimeout(() => {console.log("DING!")}, 10000);
 
 //Ejercicio 2
 
 //Crea un cronometro que avise cada vez que pasan 10 segundos
 
-let intervalo = setInterval(() => {console.log("Han pasado ya 1 segundos");
-    
-}, 1000);
+let intervalo = setInterval(() => {console.log("Han pasado ya 10 segundos");}, 10000);
 
 
 //Ejercicio 3
