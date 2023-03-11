@@ -29,14 +29,14 @@ function askNumberToSlice(_startNumber, _finishNumber, _frase)
 
 console.log(frase);
 
-// let posicionInicial = Number(prompt(`Introduce por donde quieres cortar la cadena inicial \"${frase}\"`));
+let posicionInicial = Number(prompt(`Introduce por donde quieres cortar la cadena inicial \"${frase}\"`));
 
-// let posicionFinal = Number(prompt(`Introduce por donde quieres cortar la cadena final \"${frase}\"`));
+let posicionFinal = Number(prompt(`Introduce por donde quieres cortar la cadena final \"${frase}\"`));
 
-// console.log(posicionInicial);
-// console.log(posicionFinal);
+console.log(posicionInicial);
+console.log(posicionFinal);
 
-// askNumberToSlice(posicionInicial, posicionFinal, frase);
+askNumberToSlice(posicionInicial, posicionFinal, frase);
 
 
 /////////////////////////////
@@ -56,5 +56,5 @@ function contarString(string)
     console.log(trozo);
 }
 
-contarString(string);
+// contarString(string);
 
