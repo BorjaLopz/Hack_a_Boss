@@ -45,7 +45,8 @@ const pizzas = [
     "prosciutto",
     "carbonara",
     "barbacoa",
-    "tropical"
+    "tropical",
+    "cuatro quesos"
 ];
 
 function combine(pizzas) {
@@ -55,13 +56,15 @@ function combine(pizzas) {
 
     for(const primeraMitad in pizzas)
     {
+
         for(const segundaMitad in pizzas)
         {      
             //Comprobamos que las dos mitades sean distintas
             if(pizzas[primeraMitad] !== pizzas[segundaMitad])
             {
                 //Comprobamos si NO tenemos la combinacion de segundaMitad con primeraMitad. En caso contrario metemos esa combinacion en el array
-                if(!combinations.includes(`${pizzas[segundaMitad]} y ${pizzas[primeraMitad]}`))
+                //Comprobamos ambas combinaciones ya que en caso de que dupliquemos algun dato del array [Por ejemplo, que aparezcan 2 veces "cuatro quesos"] esto lo contaria como un nuevo elemento e iterario sobre él de nuevo.
+                if((!combinations.includes(`${pizzas[primeraMitad]} y ${pizzas[segundaMitad]}`)) && (!combinations.includes(`${pizzas[segundaMitad]} y ${pizzas[primeraMitad]}`)))
                 {
                     combinations.push(`${pizzas[primeraMitad]} y ${pizzas[segundaMitad]}`);
                 }
