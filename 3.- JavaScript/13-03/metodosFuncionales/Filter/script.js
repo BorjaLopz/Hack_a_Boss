@@ -47,14 +47,14 @@ let users =
 //El callback debe devolver un booleano
 //Devuelve una copia del array original pero en el que solo estaran los elementos para los que el callback devuelva true
 
-let pares = numeros.filter((num) => num % 2 === 0);
-console.log(pares);
+// let pares = numeros.filter((num) => num % 2 === 0);
+// console.log(pares);
 
-let mayores6 = numeros.filter((num) => num > 6);
-console.log(mayores6);
+// let mayores6 = numeros.filter((num) => num > 6);
+// console.log(mayores6);
 
-let adultos = users.filter((users) => users.edad > 18) ;
-console.log(adultos);
+// let adultos = users.filter((users) => users.edad > 18) ;
+// console.log(adultos);
 
 let menores = users.filter((usuario) => usuario.edad < 18);
 console.log(menores);

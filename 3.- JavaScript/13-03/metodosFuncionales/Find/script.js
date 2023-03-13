@@ -29,7 +29,7 @@ let users =
     }, 
 
     {
-        nombre: "ana", 
+        nombre: "Pepe", 
         email: "pepe@pepe.com",
         edad: 17,
     }, 
