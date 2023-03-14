@@ -106,14 +106,15 @@ function countScores(animal, animalsArr, scoresArr) {
     }
 }
 
+//Obtenemos un array con el nombre del animal y la especie que la hayamos especificado
 function getAllAnimalsOfType(_animalSpecies, _animalsArray)
 {
     //Usamos .filter para sacar todos los animales de dicha especie del array
     let animalsOfType_ = _animalsArray.filter((animal) => animal.species === _animalSpecies);
-
     return animalsOfType_;
 }
 
+//Obtenemos un array de todos los nombres de los animales
 function getAllNamesOfSpecie(_animalsArray)
 {
     //Usamos .map para crear un array con todos los nombres del animal especificado
@@ -121,27 +122,28 @@ function getAllNamesOfSpecie(_animalsArray)
     return animalsNames_;
 }
 
+//Obtenemos un array con las puntuaciones correspondiente a los nombres de los animales que le pasamos
 function getAllScoresByName(_animalsName, _animalsScore)
 {
-    let scores = []; 
+    let scores_ = []; 
 
     for(const animalName in _animalsName)
     {
         //Añadimos al array scores toda la informacion de puntuacion con los nombres de los animales
-        scores.push(_animalsScore.find((animalToFind) => animalToFind.animal === _animalsName[animalName]));
+        scores_.push(_animalsScore.find((animalToFind) => animalToFind.animal === _animalsName[animalName]));
     }
-    
-    return scores;
+    return scores_;
 
 }
 
+//Conseguimos la puntuacion total de todos los animales 
 function getTotalScores(_animalsScores)
 {
-
     let total = _animalsScores.reduce(reducerScore, 0);
     return total;
 }
 
+//Creamos un acumulador custom para poder sumar las puntuaciones de los animales
 function reducerScore(acc, animal)
 {
     return acc + animal.score;
@@ -152,4 +154,4 @@ console.log("Cat: " + countScores("cat", animals, animalScores)); // Returns -> 
 console.log("Dog: " + countScores("dog", animals, animalScores)); // Returns -> 37
 console.log("Snake: " + countScores("snake", animals, animalScores)); // Returns -> 7
 console.log("Chicken: " + countScores("chicken", animals, animalScores)); // Returns -> 3
-console.log("Hamter: " + countScores("hamster", animals, animalScores)); // Returns -> 0
+console.log("Hamster: " + countScores("hamster", animals, animalScores)); // Returns -> 0
