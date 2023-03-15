@@ -90,12 +90,20 @@ function getOwnerByMatricula(_matriculasAntiguas, _matriculasArray = matriculasA
 
 function logOwner(_propietario)
 {
-    //Iteramos del array de todos los propietarios
-    for(const owner in _propietario)
+    if(_propietario.length > 0)
     {
-        //Sacamos por consola el texto con el nombre de propietario, marca, modelo y matricula
-        console.log(`${+owner + 1}.- ${_propietario[owner].propietario} tiene que pasar la ITV de su ${_propietario[owner].marca} ${_propietario[owner].modelo} con matricula ${_propietario[owner].matricula}`);
-        console.log("");
+
+        //Iteramos del array de todos los propietarios
+        for(const owner in _propietario)
+        {
+            //Sacamos por consola el texto con el nombre de propietario, marca, modelo y matricula
+            console.log(`${+owner + 1}.- ${_propietario[owner].propietario} tiene que pasar la ITV de su ${_propietario[owner].marca} ${_propietario[owner].modelo} con matricula ${_propietario[owner].matricula}`);
+            console.log("");
+        }
+    }
+    else
+    {
+        console.log("No coinciden ningun dato con nuestros clientes.");
     }
 }
 
@@ -103,7 +111,7 @@ function getOwnersITV(_matriculasArray = matriculasArray)
 {
     let matriculas = getAllMatriculasFromArray(_matriculasArray);
     let letterMatriculas = getAllLettersFromMatricula(matriculas);
-    let matriculasAntiguas = getOlderMatriculas(letterMatriculas, "LDR");
+    let matriculasAntiguas = getOlderMatriculas(letterMatriculas /*,"LDR"*/);
     let propietarios = getOwnerByMatricula(matriculasAntiguas);
     logOwner(propietarios);
 }

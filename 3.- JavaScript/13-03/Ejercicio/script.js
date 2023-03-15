@@ -112,7 +112,6 @@ function getAllAnimalsOfType(_animalSpecies, _animalsArray)
     //Usamos .filter para sacar todos los animales de dicha especie del array
     let animalsOfType_ = _animalsArray.filter((animal) => animal.species === _animalSpecies);
     // let animalsOfType_ = _animalsArray.filter((animal) => console.log(animal.species, _animalSpecies));
-    console.log(animalsOfType_);
     return animalsOfType_;
 }
 
