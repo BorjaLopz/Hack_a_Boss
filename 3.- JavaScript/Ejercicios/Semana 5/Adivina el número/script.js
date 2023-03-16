@@ -36,11 +36,8 @@ function quiz()
     let userNumber;
     let fraseLog = "";
 
-    
-        
     do
     {
-        
         //Pedimos al usuario que meta siempre numeros del 0 al numeroMaximo, ya que ahi no contara ni como vida ni como fallo ya que no entra dentro de nuestro rango de numeros.
         do
         {
@@ -69,7 +66,6 @@ function quiz()
     }while(numeroActualDeVidas > 0)
 
     loseScreen(numeroAdivinar, userGuesses);    
-    
 }
 
 function checkWin(_numberToGuess, _userNumber)

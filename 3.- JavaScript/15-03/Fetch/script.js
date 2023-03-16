@@ -63,15 +63,17 @@ async function mostrarPersonajes()
 async function mostrarCasas()
 {
     //URL BUENA
-    // let casas = await getData("https://anapioficeandfire.com/api/houses");
+    let casas = await getData("https://anapioficeandfire.com/api/houses");
 
     //URL MALA para ver el error en el live server
-    let casas = await getData("https://anapioficeandfire.com/api/housess");
+    // let casas = await getData("https://anapioficeandfire.com/api/housess");
 
     // console.log(casas);
 
     let [casa] = casas;
 
+    console.log(casas);
+    
     let overlordURL = casa.overlord;
 
     let overlodData = await getData(overlordURL);
