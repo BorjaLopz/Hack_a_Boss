@@ -1,0 +1,16 @@
+html
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.clock
+{
+    font-size: 3rem;
+    text-align: center;
+}
+
+.separator
+{
+    color: white; /* Esto es igual a color: transparent;*/
+    /* color: blue; */
+}

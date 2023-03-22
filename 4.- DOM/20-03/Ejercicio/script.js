@@ -4,6 +4,7 @@
 //Si la asignatura está aprobada (5 o más) tendrá el fondo verde
 //Si está suspensa (menos de 5), tendrá el fondo rojo
 
+/* const de los colores*/ 
 const colorPass = "green";
 const colorFail = "red";
 
@@ -15,7 +16,7 @@ let table = document.querySelector("table");
 let td = table.querySelectorAll("td");
 // console.log(td)
 
-function assignColor(_itemToCheck, _colorPass = "green", _colorFail = "red")
+function assignColorToTD(_itemToCheck, _colorPass = "green", _colorFail = "red")
 {
 
     for(let i = 0; i < _itemToCheck.length; i++)
@@ -32,4 +33,4 @@ function assignColor(_itemToCheck, _colorPass = "green", _colorFail = "red")
     }
 }
 
-assignColor(td, colorPass, colorFail);
+assignColorToTD(td, colorPass, colorFail);

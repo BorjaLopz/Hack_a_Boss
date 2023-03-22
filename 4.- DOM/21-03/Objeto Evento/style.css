@@ -1,0 +1,35 @@
+html
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    --colorFondo: white;
+    --colorText: black;
+    --colorDestacado: blue;
+
+    background: var(--colorFondo);
+    color: var(--colorText);
+}
+
+.importante
+{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.destacado
+{
+    font-size: 1.2rem;
+    color: var(--colorDestacado);
+}
+
+.dark
+{
+    background: rgb(36, 36, 36);
+    color: white;
+}
+
+.titulo
+{
+    color: blueviolet;
+    font-family: 'Courier New', Courier, monospace;
+}

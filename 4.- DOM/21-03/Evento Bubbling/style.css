@@ -1,0 +1,21 @@
+html
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header
+{
+    border: 1px solid blue;
+}
+
+h1
+{
+    width: fit-content;
+    border: 1px solid;
+}
+
+body
+{
+    border: 1px solid blueviolet;
+    padding: 2rem;
+}

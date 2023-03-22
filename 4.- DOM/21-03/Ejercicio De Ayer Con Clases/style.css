@@ -1,0 +1,33 @@
+html
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+th, td
+{
+    border: 1px solid;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.aprobado
+{
+    background: var(--suspenso);
+}
+
+.suspenso
+{
+    background: var(--aprobado);
+}
+
+table
+{
+    --aprobado: rgb(233, 54, 54);
+    --suspenso: rgb(19, 212, 19);
+}
+
+.dark table
+{
+    --aprobado: rgb(134, 0, 0);
+    --suspenso: rgb(0, 99, 0);
+}
