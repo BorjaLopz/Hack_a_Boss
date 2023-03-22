@@ -11,10 +11,10 @@
 */
 
 const trollButton = document.querySelector("button");
-console.log(trollButton);
+// console.log(trollButton);
 
 const main = document.querySelector("main");
-console.log(main);
+// console.log(main);
 
 //Funcion que mostrara un alert cuando pulsamos en el boton
 function showAlert()
@@ -32,37 +32,39 @@ function showAlert()
 //Añadimos un eventListener que llamará a la función que queramos. 
 trollButton.addEventListener("click", showAlert);
 
-let buttonX = trollButton.offsetLeft;
-let buttonY = trollButton.offsetTop;
-let mouseX;
-let mouseY;
-
-
-function moveTrollButton()
+function moveTrollButton(e)
 {   
+    //Distancia maxima del viewport obtenida por window
     let maxWidth = window.innerWidth;
     let maxHeight = window.innerHeight;
+
+    //Dimension del botón. 
     let buttonWidth = parseInt(trollButton.offsetHeight);
     let buttonHeight = parseInt(trollButton.offsetHeight);
     
+    //Lo ubicamos de manera aleatoria entre el tamaño del viewport menos el tamaño del boton para evitar que salga fuera de la pantalla
     let x = Math.floor(Math.random() * (maxWidth - buttonWidth + 1) );
     let y = Math.floor(Math.random() * (maxHeight - buttonHeight + 1));
     
+    //Le asignamos el valor tanto para top como left en px
     trollButton.style.left = x + "px";
     trollButton.style.top = y + "px";
 
-    buttonX = trollButton.offsetLeft;
-    buttonY = trollButton.offsetTop;
+    //Obtenemos la ubicacion actual del mouse, tanto en X como en Y. 
+    let {x : mouseX, y : mouseY} = e; 
+    let mouseYMax = y + buttonHeight;
+    let mouseXMax = x + buttonWidth;
 
-    // console.log("buttonX:", buttonX);
-    // console.log("buttonY:", buttonY);
-    // console.log("mouseX:", mouseX);
-    // console.log("mouseY:", mouseY);
-    calculateDistance(buttonX, buttonY, mouseX, mouseY);
-    
+    //Comprobamos si la nueva posicion del boton esta entre los margenes que queremos
+    if((mouseY > y && mouseY < mouseYMax) || (mouseX > x && mouseX < mouseXMax))
+    {
+        //Llamamos de nuevo a la funcion
+        moveTrollButton(e);
+    }
+
+    //Cambiamos el color del background.
     trollButton.style.background = randomRGB();
 }
-
 
 function randomRGB()
 {
@@ -73,39 +75,3 @@ function randomMax(_num)
 {
     return Math.floor(Math.random() * (_num + 1));
 }
-
-function calculateDistance(_btnX, _btnY, _mseX, _mseY)
-{
-    let y = _mseY - _btnY;
-    let x = _btnX + _mseX;
-
-    let ysquared = y * y;
-    let xsquared = x * x;
-
-
-    console.log("y:", y);
-    console.log("ysquared:", ysquared);
-    console.log("x:", x);
-    console.log("xsquared:", xsquared);
-
-    let distance = Math.sqrt(ysquared + xsquared);
-
-    console.log("distance: ", distance)
-
-    console.log("");
-}
-
-function logMousePos()
-{
-    mouseX = event.clientX;
-    mouseY = event.clientY;
-    calculateDistance(buttonY, buttonX, mouseX, mouseY);
-    // console.log("Y", event.clientY);
-    // console.log("X",event.clientX);
-    // console.log("");
-    // console.log("X: ", buttonX);
-    // console.log("Y: ", buttonY);
-    // console.log("");
-}
-
-document.addEventListener("mousemove",logMousePos)
