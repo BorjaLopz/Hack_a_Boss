@@ -1,0 +1,44 @@
+1. Creamos un nuevo repositorio (el coordinador). 
+	a. Lo hacemos publico para que se pueda corregir. 
+	b. Podemos añadir readme, no hace falta poner .gitignore y licencia tambien es opcional. 
+
+2. La persona que haya creado el repositorio será la encargada de subir los archivos iniciales, ya sea un JSON que sepamos que vamos a utilizar o lo que queramos. Si no lo tenemos aun, podemos subir un HTML vacio. 
+
+3. Lo clonamos como siempre con el SSH. 
+
+4. Para ver en que rama estas actualmente tenemos que poner el comando en gitbash "git chekout". En caso de no tener ningun archivo generado, y por tanto ni main ni ramas, saldrá un fallo. Por lo tanto, aunque sea un txt vacio tenemos que subirlo para generar la rama "main".
+Si repetimos el comando "git chekout" nos pondrá ya que estamos en "origin/main". 
+
+5. Cuando nos ponga que dicha rama no está en el repositorio en remoto nos podrá salir un error y la solucion a la vez. En este caso usaremos el comando "git branch --unset-upstream". Una vez hecho esto, quitamos el error. 
+Si hacemos un "git chekout" ahora no saldrá ningun conflicto. 
+
+6. Cuando hagamos "git push" de dicha rama, nos saldrá un error ya que le hemos quitado el upstream. A su vez nos saldrá la solución "git push --set-upstream origin main". Esto solo lo tendremos que hacer la primera vez que creemos una rama. Despues de esto nos saldra al final de todo una linea diciendo que la rama main se ha trackeado de manera correcta. 
+
+7. Tendremos que invitar al resto de personas del grupo, para que ellos puedan hacer push. Settings -> Collaborators -> Add People. Les podemos añadir por usuario, por correo... Dicha invitacion queda en pendiente y llegará al mail. Tendremos que darle a ver invitacion, y una vez dentro tienes que darle a aceptar invitación. Una vez se haya aceptado dicha invitación, veremos que la persona invitada ya es colaboradora, por lo que podrá hacer push. 
+
+8. Para saber en que rama estamos, si estamos en main o en la nuestra propia, tendremos que usar el comando "git branch"
+
+9. Despues de esto tendremos que cada uno cree una rama. Usaremos el comando git checkout -b "nombreDeLaRama". Automaticamente nos cambiara a esa rama. Si hacemos git branch nos aparecera las ramas EN LOCAL y subrayada en la que estamos actualmente. 
+
+10. Una vez que estamos en nuestra rama, añadiremos un nuevo archivo touch otroArchivo.txt. [La otra persona puede modificar el archivo inicial para probar]. Ahora podriamos hacer un commit. [git add .   -> git commit -m"añadiendo otro archivo"]
+SIEMPRE tenemos que hacer commit de lo que queramos en la rama, ya que si nos cambiamos de rama [git chekout main] y luego hacemos commit, los cambios locales se subiran directamente a main en lugar de nuestra rama. 
+
+11. Volvemos a cambiarnos a nuestra rama git checkout nombreDeLaRama 
+Ahora haremos un push [git push] de lo que ya teniamos commiteado, se queda stackeado. La primera vez que hagamos push en un rama nos saldrá el mismo error que en la linea 6. Lo solucionamos copiando el codigo que nos aparece. 
+
+12. Cuando subamos un archivo que otra persona necesita, tendremos que ver en el navegador el boton "pull request". Esto lo puede hacer cualquier usuario. Lo que tenemos que hacer es donde hayamos subido nuestro archivo que necesita la otra persona, creamos pull request a main (asi queda constancia de quien ha subido dicho archivo y demás). Una vez hecho eso, veremos si hay conflictos o no (cambios en la misma linea de 2 ficheros iguales, etc...). Si no da conflicto, podremos hacer click en el botón merge pull request. Lo suyo seria que lo viera otra persona para que checkee que no hay ningun problema, vea que archivos se suben y demas. Despues de esto podremos borrar la rama o dejarla para seguir trabajando en ella. Ahora ya tendremos dicho archivo en main. 
+
+13. Para que la otra persona lo pueda tener en su rama, NO debe haber ningun cambio en su rama [git status tiene que salir limpio, ni rojo ni verde]. En caso de que haya algun cambio, haremos commit. Lo que hacemos es cambiar a la rama local de main git checkout main. Una vez que la tenemos seleccionada, haremos un git pull para actualizar lo que tenemos en local con lo que tenemos subido en remoto.
+Ahora si que tenemos el main actualizado pero NO tenemos nuestra rama actualizada. Volvemos a cambiar a nuestra rama 
+
+///////////////////////////////////////////
+
+¿Que pasa cuando hay conflicto?
+
+14. Probamos a modificar el mismo archivo.txt en la misma linea con contenido diferente. 
+
+15. Para generar el conflicto tendremos que hacer un pull request para mandarla a main desde nuestra rama. base: main / compare: nuestraRama. 
+
+16. La otra persona hará lo mismo, el archivo.txt hace pull request y nos dira que no puede hacer un merge automatico. Asique la persona que tiene el problema será persona que tiene dicho problema sera la encargada de solucionarlo. La manera de hacerlo es volver a coger todo lo que tengamos en el main (paso 13), de esta manera ya tenemos actualizado el main pero no nuestra rama local. Ahora podremos abrir el archivo en visual y nos da herramientas para poder solucionarlo (nos marca las lineas donde hay conflictos y los cambios como current o como income y asi podremos elegir si una, otra o las dos). Depues de elegir guardamos y tenemos en LOCAL los cambios definitivos. 
+
+17. Ahora tendremos que hacer un commit de nuestra rama. Creamos un pullrequest y deberia no haber conflicto para unir la rama a main. 
