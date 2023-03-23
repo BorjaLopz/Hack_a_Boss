@@ -1,55 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Formularios </title>
-        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
     </head>
     <body>
-        <header>
-            <h1>Formularios</h1>
-        </header>
-
+        <header><h1>Formularios</h1></header>
         <main>
-
-            <form action="">
+        <form>
+            <ul>
+            <li>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="name" required value="Zoe" />
+            </li>
+            <li>
+                <label for="terminos">Acepto los terminos:</label>
+                <input type="checkbox" id="terminos" name="terminos" />
+            </li>
+            <li>
+                <fieldset>
+                <legend>Talla</legend>
                 <ul>
                     <li>
-                        <label for="nombre" value="nombre">Nombre:</label>
-                        <input type="text" id="nombre" name="name" />
+                    <label for="s">S</label>
+                    <input type="radio" id="s" name="talla" value="s" />
                     </li>
-
                     <li>
-                        <label for="terminos">Acepto los terminos:</label>
-                        <input type="checkbox" id="terminos" name="terminos"/>
+                    <label for="m">M</label>
+                    <input type="radio" id="m" name="talla" value="m" />
                     </li>
-
-                    <fieldset>
-                        <legend>Talla</legend>
-                        <ul>
-                            <li>
-                                <label for="s">S</label>
-                                <input type="radio">
-                            </li>
-                            <li>
-                                <label for="m">M</label>
-                                <input type="radio">
-                            </li>
-                            <li>
-                                <label for="l">L</label>
-                                <input type="radio">
-                            </li>
-                        </ul>
-                    </fieldset>
+                    <li>
+                    <label for="l">L</label>
+                    <input type="radio" id="l" name="talla" value="l" />
+                    </li>
                 </ul>
-            </form>
-
-            
+                </fieldset>
+            </li>
+            <li>
+                <select name="provincia" id="provincia">
+                <option value="15">A Coruña</option>
+                <option>Ourense</option>
+                <option>Lugo</option>
+                <option>Pontevedra</option>
+                </select>
+            </li>
+            </ul>
+            <button name="boton">Enviar</button>
+        </form>
         </main>
-
-
         <script src="script.js"></script>
     </body>
 </html>

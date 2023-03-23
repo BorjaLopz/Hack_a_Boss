@@ -23,12 +23,12 @@ console.log(name.value);
 function leerCampos(e)
 {
     //Evitamos que mande el formulario y asi recargue la pagina
-    e.preventDefault();
+    e.preventDefault(); 
 
     //Leer campos normales
     console.log(name.value)
 
-    
+
 }
 
 boton.addEventListener("click", leerCampos);
