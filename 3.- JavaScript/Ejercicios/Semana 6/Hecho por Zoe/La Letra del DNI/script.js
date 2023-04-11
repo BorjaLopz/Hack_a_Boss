@@ -35,8 +35,6 @@ Si alguna de las comprobaciones falla, lanzará un Error de JavaScript  que diga
 const letras = [ "T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X", "B", "N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E"];
 
 const DNI = "00000000-T";
-const DNIBorja = "51129885-B";
-const DNIDarinka = "51129886-n";
 
 function validateDNI(_dni) {
     // escribe aquí tu código

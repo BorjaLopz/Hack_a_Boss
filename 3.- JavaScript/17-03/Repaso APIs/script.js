@@ -104,3 +104,5 @@ async function getCharacterByGender(_gender, _url = URL)
 // getCharacterByGender("f"); //71
 // getCharacterByGender("m"); //251
 // getCharacterByGender(""); //6390
+
+// getCharacterByName("Homer");
