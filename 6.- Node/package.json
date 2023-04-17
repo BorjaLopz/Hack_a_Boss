@@ -1,0 +1,15 @@
+{
+  "name": "myfirtapp",
+  "version": "0.0.1",
+  "description": "",
+  "main": "as",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node apps.js"
+  },
+  "author": "borja lopez diaz",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
