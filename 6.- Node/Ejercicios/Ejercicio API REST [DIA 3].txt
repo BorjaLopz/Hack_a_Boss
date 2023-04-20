@@ -1,0 +1,7 @@
+RECURSOS 
+
+1.- https://www.tutorialspoint.com/expressjs/expressjs_url_building.htm
+
+2.- https://www.npmjs.com/package/express
+
+3.- https://www.npmjs.com/package/body-parser

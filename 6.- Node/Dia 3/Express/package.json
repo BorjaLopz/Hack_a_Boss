@@ -1,6 +1,7 @@
 {
-  "name": "serverexpress",
+  "name": "server",
   "version": "0.0.1",
+  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,8 +11,8 @@
   "author": "Borja Lopez",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^16.0.3"
-  },
-  "devDependencies": {},
-  "description": ""
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "global": "^4.4.0"
+  }
 }
