@@ -1,0 +1,15 @@
+{
+  "name": "semana-1_zoe",
+  "version": "0.0.1",
+  "description": "",
+  "main": "ejercicio1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Borja",
+  "license": "ISC",
+  "dependencies": {
+    "minimist": "^1.2.8",
+    "prompt-sync": "^4.2.0"
+  }
+}

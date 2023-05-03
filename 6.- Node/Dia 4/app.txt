@@ -1,0 +1,70 @@
+// const mysql = require("mysql2/promise");
+// require("dotenv").config();
+
+// (async () => {
+//   //Creamos conexion con base de datos
+//   const connection = mysql.createConnection({
+//     host: process.env.HOST,
+//     port: process.env.PORT,
+//     user: process.env.USER,
+//     // password: "root",
+//     database: process.env.DATABASE, //USE nba;
+//   });
+//   // const teams = await connection.query("SELECT * FROM equipos");
+//   // console.log(teams);
+// })();
+
+const mysql = require("mysql2/promise");
+require("dotenv").config();
+
+const express = require("express");
+const app = new express();
+
+const { getAllTeamsController } = require("./controllers/teams");
+const Teams = require("./repository/teams");
+const { amIAdult, amIOld } = require("./middlewares/utils");
+
+let connection; //Conexion con la BD
+
+app.listen(process.env.DB_PORT, async () => {
+  connection = await mysql.createConnection({
+    host: process.env.DB_HOST,
+    port: process.env.DB_PORT,
+    user: process.env.DB_USER,
+    // password: process.env.DB_PASSWORD,
+    database: process.env.DB_DATABASE //USE nba;
+  });
+  console.log(`app listen in port ${process.env.DB_PORT}`);
+});
+
+app.get("/", getAllTeamsController);
+
+/* Todas las peticiones van a sobreescribir el objeto request, le añadimos el objeto conexion. Sabremos que esta lleno porque cuando hacemos la conexion con la DB la generamos. Independientemente de si estamos o no en el mismo archivo.
+Asi podremos pasarle al resto de ficheros la conexion */
+app.use((req, res, next) => {
+  const teams = new Teams(connection);
+  req.repositories = { teams } ;
+  req.connection = connection;
+  next();
+});
+
+/* Middleware porque se pone en la mitad de todo*/
+app.get("/:age", amIAdult, amIOld, (req, res) => {
+  try {
+    res.send("Eres mayor de edad");
+  } catch (e) {
+    res.send(e.message);
+  }
+});
+
+// (async () => {
+//   const connection = await mysql.createConnection({
+//     host: process.env.DB_HOST,
+//     port: process.env.DB_PORT,
+//     user: process.env.DB_USER,
+//     // password: "root",
+//     database: process.env.DB_DATABASE, //USE nba;
+//   });
+//   const todo = await connection.query("SELECT * FROM equipos");
+//   console.log(todo);
+// })();
