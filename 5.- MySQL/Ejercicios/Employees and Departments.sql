@@ -133,7 +133,7 @@ ON E.Department = D.Code;
 /*Select the name and last name of each employee, along with the name and budget of the employee's department.*/
 
 /*
-SELECT employees.Name, employees.LastName, departments.Name, departments.Budget
+SELECT employees.Name, employees.LastName, departments.Name as departmentName, departments.Budget
 FROM employees INNER JOIN departments
 ON departments.Code = employees.department;
 */
@@ -142,12 +142,13 @@ ON departments.Code = employees.department;
 /*Select the name and last name of employees working for departments with a budget greater than $60,000.*/
 
 /* OPCION 1*/
-/*
+
 SELECT employees.Name, LastName, Budget
 FROM employees INNER JOIN departments
 ON departments.Code = employees.department
 WHERE departments.budget >= 60000;
-*/
+
+
 
 /* OPCION 2*/
 /*
