@@ -11,6 +11,7 @@ function ToDoComponent() {
   //setTodoList -> Funcion. Esta funcion me permitirá cambiar el valor de dicha variable. Nos permite añadir o quitar propiedades
 
   const handleChange = (e) => {
+    // console.log(e.target.value);
     setItem(e.target.value);
   };
 
@@ -18,6 +19,7 @@ function ToDoComponent() {
     e.preventDefault();
 
     const items = [item, ...todoList];
+    console.log(item);
     setTodoList(items)
     setItem("")
 

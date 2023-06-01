@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+header h1 {
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+  padding: 2rem;
+  background-color: rgb(253, 241, 226);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
